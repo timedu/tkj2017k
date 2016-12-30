@@ -4,10 +4,11 @@
 title: TKJ2017k # kurssitoteutuksen tunnus 
 baseurl: "/tkj2017k"
 
-moodle_upload_address: https://moodle2.tut.fi/mod/vpl/view.php?id=
-
 kurssin_nimi: Tietokantajärjestelmät
 
+discussion_address: "https://moodle2.tut.fi/mod/forum/discuss.php?d="
+upload_address: "https://moodle2.tut.fi/mod/vpl/view.php?id="
+review_address: "https://moodle2.tut.fi/mod/url/view.php?id=300088"
 
 # Build settings
 

@@ -1,6 +1,5 @@
 
 
-
 {% comment %}
 ----------------------------------------------------------------------
 Linkki tehtäväpohjaan                                 {% endcomment %}
@@ -19,50 +18,44 @@ Linkki tehtäväpohjaan                                 {% endcomment %}
 {% endif %}
 
 
-
 {% comment %}
 ----------------------------------------------------------------------
 Linkki tehtävän keskustelualueelle                    {% endcomment %}
           
-{% if page.exercise_dicussion_id != null %} 
-       
-  {% assign link = site.moodle_dicussion_address              %}
-  {% assign link = link | append: page.exercise_dicussion_id  %}
-              
-  {% assign link = "#" %}
+{% unless page.exercise_discussion_id == null %} 
+
+  {% if page.exercise_dicussion_id != "#" %} 
+      {% assign link = site.discussion_address | append: page.exercise_discussion_id %}      
+  {% else %}
+      {% assign link = "#" %}          
+  {% endif %}
                                           
   <a class="page-link" href="{{link}}">Keskustelu</a> 
        
-{% endif %}
-
+{% endunless %}
 
 
 {% comment %}
 ----------------------------------------------------------------------
 Linkki koodikatselmointipyyntöön                      {% endcomment %}
-
-{% if page.exercise_review_id != null %} 
-                     
-  {% assign link = "#" %}
-                     
-  <a class="page-link" href="{{link}}">Katselmointi</a> 
+                                          
+<a class="page-link" href="{{site.review_address}}">Katselmointi</a> 
        
-{% endif %}
-
-
+      
       
 {% comment %}
 ----------------------------------------------------------------------
 Linkki ratkaisun palautustyökaluun                    {% endcomment %}
           
-{% if page.exercise_upload_id != null %} 
-       
-  {% assign link = site.moodle_upload_address                 %}
-  {% assign link = link | append: page.exercise_upload_id     %}
+{% unless page.exercise_upload_id == null %} 
 
-  {% assign link = "#" %}
+  {% if page.exercise_upload_id != "#" %} 
+      {% assign link = site.upload_address | append: page.exercise_upload_id %}       
+  {% else %}
+      {% assign link = "#" %}
+  {% endif %}
               
   <a class="page-link" href="{{link}}">Palautus</a> 
        
-{% endif %}
+{% endunless %}
 
