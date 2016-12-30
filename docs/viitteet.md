@@ -2,6 +2,7 @@
 layout: site_page
 title: Viitteet
 permalink: /viitteet/index.html 
+site_menu: 1
 ---
 
 #### Tietokantateknologioita
