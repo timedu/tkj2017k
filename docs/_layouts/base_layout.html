@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+  {% if page.kesken %}
+  
+      {% assign osa = site.collections | where: "label", page.collection | first %}             
+
+      {% if page.julkaisu %}
+          {% assign julkaisuaika = page.julkaisu %}        
+      {% elsif page.collection and osa.julkaisu  %}
+          {% assign julkaisuaika = osa.julkaisu  %}               
+      {% endif %}
+
+      {% if julkaisuaika %}
+          {% assign julkaisuaika = julkaisuaika | append: ' mennessä' %}                     
+      {% else %}      
+          {% assign julkaisuaika = "myöhemmin"   %}               
+      {% endif %}
+      
+      {% assign julkaisuaika = julkaisuaika | prepend: 'sivu julkaistaan ' %}                     
+                                          
+  {% endif %}  
+
+  {% include head.html %}
+
+  <body>
+
+    {% include page_header.html %}
+
+    <div class="page-content">   
+     
+      <div class="wrapper">  
+
+        {% if page.kesken %}
+                 
+            {% highlight html %}{{ julkaisuaika }}{% endhighlight %} 
+                                          
+        {% endif %}  
+                      
+        {{ content }}
+        
+      </div>    
+        
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

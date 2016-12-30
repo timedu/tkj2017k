@@ -1,0 +1,68 @@
+
+# Site settings
+
+title: TKJ2017k # kurssitoteutuksen tunnus 
+baseurl: "/tkj2017k"
+
+moodle_upload_address: https://moodle2.tut.fi/mod/vpl/view.php?id=
+
+kurssin_nimi: Tietokantajärjestelmät
+
+
+# Build settings
+
+markdown: kramdown
+  
+collections:
+
+  osa1:
+    output: true
+    permalink: /:collection/:path/
+    nimi: Osa 1
+    otsikko: Kehitysympäristö
+    julkaisu: 9.1.2017
+    
+  osa2:
+    output: true
+    permalink: /:collection/:path/
+    nimi: Osa 2
+    otsikko: ORM-työkalut
+    julkaisu: 16.1.2017
+        
+  osa3:
+    output: true
+    permalink: /:collection/:path/
+    nimi: Osa 3
+    otsikko: Avain-arvoparitietokannat
+    julkaisu: 23.1.2017
+            
+  osa4:
+    output: true
+    permalink: /:collection/:path/
+    nimi: Osa 4
+    otsikko: Dokumenttitietokannat
+    julkaisu: 30.1.2017
+            
+  osa5:
+    output: true
+    permalink: /:collection/:path/
+    nimi: Osa 5
+    otsikko: Graafitietokannat
+    julkaisu: 6.2.2017
+    
+  osa6:
+    output: true
+    permalink: /:collection/:path/
+    nimi: Osa 6
+    otsikko: Sarakeperhetietokannat
+    julkaisu: 13.2.2017
+        
+  osa7:
+    output: true
+    permalink: /:collection/:path/
+    nimi: Osa 7
+    otsikko: Hybriditietokannat
+    julkaisu: 20.2.2017
+
+    
+  

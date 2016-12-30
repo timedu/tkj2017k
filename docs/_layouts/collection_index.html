@@ -1,0 +1,22 @@
+---
+layout: base_layout
+---
+
+{% assign osa = site.collections | where: "label", page.collection | first %}
+
+<article class="post">
+
+  <header class="post-header">
+        
+      <h1>{{ osa.nimi }}: {{ osa.otsikko }}</h1>
+    
+  </header>
+
+  <div class="post-content">
+  
+      {{ content }}
+    
+  </div>
+
+</article>
+

@@ -1,0 +1,47 @@
+
+{% comment    %}
+-----------------------------------------------------------------
+
+  Muodostaa linkit kokoelmien index-sivuille.
+  
+{% endcomment %}
+
+      {% for collection in site.collections %} 
+      
+        {% if collection.otsikko %}
+        
+          <a class="page-link" href="{{ site.baseurl }}/{{ collection.label }}/">
+          
+            {{ collection.nimi }}
+            
+          </a>      
+
+        {% endif %}
+  
+      {% endfor %}
+
+
+
+{% comment    %}
+-----------------------------------------------------------------
+
+  Muodostaa linkit päätason sivuille, joille on määritelty 
+  title-attributti.
+    
+{% endcomment %}
+                                                       
+      {% for page in site.pages %}
+      
+        {% if page.title %}
+                  
+          <a class="page-link" href="{{ site.baseurl }}/{{ page.name | remove:'.md'}}/">
+          
+            {{ page.title }}
+            
+          </a>      
+      
+        {% endif %}
+  
+      {% endfor %} 
+      
+             
