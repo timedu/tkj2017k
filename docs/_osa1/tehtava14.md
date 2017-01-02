@@ -7,4 +7,3 @@ exercise_upload_id: 300105
 kesken: 1
 ---
 
-s

@@ -7,13 +7,16 @@ layout: base_layout
 
 {% comment %} .timedu-page-nav defined in "_base.scss" {% endcomment %}
 
-<nav class="timedu-page-nav">
-  <a class="page-link" href="{{link}}">{{osa.nimi}}: {{osa.otsikko}}</a>
-</nav>      
 
 <article class="post">
 
+
   <header class="post-header">
+
+<nav class="timedu-page-nav">
+  <a class="page-link" href="{{link}}">{{osa.nimi}}: {{osa.otsikko}}</a>
+</nav>      
+  
   
     <h1>{{ page.title }}</h1>
     

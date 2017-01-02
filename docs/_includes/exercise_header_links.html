@@ -29,7 +29,8 @@ Linkki tehtävän keskustelualueelle                    {% endcomment %}
   {% else %}
       {% assign link = "#" %}          
   {% endif %}
-                                          
+  
+  &nbsp;                                        
   <a class="page-link" href="{{link}}">Keskustelu</a> 
        
 {% endunless %}
@@ -38,7 +39,8 @@ Linkki tehtävän keskustelualueelle                    {% endcomment %}
 {% comment %}
 ----------------------------------------------------------------------
 Linkki koodikatselmointipyyntöön                      {% endcomment %}
-                                          
+ 
+&nbsp;                                           
 <a class="page-link" href="{{site.review_address}}">Katselmointi</a> 
        
       
@@ -54,7 +56,8 @@ Linkki ratkaisun palautustyökaluun                    {% endcomment %}
   {% else %}
       {% assign link = "#" %}
   {% endif %}
-              
+  
+  &nbsp;              
   <a class="page-link" href="{{link}}">Palautus</a> 
        
 {% endunless %}

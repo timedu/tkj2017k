@@ -45,9 +45,46 @@ $on-laptop:        800px;
 
 
 
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
         "layout",
         "syntax-highlighting"
 ;
+
+
+
+
+/**
+ * TiMEdu extras
+ */
+
+.timedu-page-nav {
+  margin-bottom: 10px;
+  .page-link {    
+    color: $text-color;
+  }  
+}
+
+.site-header {
+	background-color: #F2F2F2;	
+}
+
+pre, code, .highlighter-rouge .highlight {
+	background: #eee;	
+}
+
+.page-content .wrapper {
+  border-left: dotted grey thin;
+}
+
+.post-header h1 {
+  border-bottom: dotted grey thin;
+}
+/*
+.post-header {
+  padding-top: 10px;
+
+}
+*/
