@@ -7,12 +7,10 @@ Linkki tehtäväpohjaan                                 {% endcomment %}
 {% if page.exercise_template_name != null %}  
 
   {% assign link = site.baseurl                               %}
-  {% assign link = link | append: "/koodi_pohjat/"            %}
+  {% assign link = link | append: "/pohjat/"                  %}
   {% assign link = link | append: page.exercise_template_name %}
   {% assign link = link | append: ".zip"                      %}
   
-  {% assign link = "#" %}
-
   <a class="page-link" href="{{link}}">Tehtäväpohja</a> 
     
 {% endif %}

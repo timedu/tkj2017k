@@ -30,16 +30,47 @@ site_menu: 1
 #### Muita aineistossa esillä olevia ohjelmistoteknologioita
 
 [NetBeans IDE][netbeans]  
-
 [Node.js][node]  
-[Express][express]   
-[Handlebars][handlebars]   
 
+* [Documentation][node-doc]:
+[HTTP][node-http]
+
+[Express][express]   
+
+* [API Reference][express-api]
+* [express-handlebars][express-handlebars]
+* [body-parser][body-parser]
+
+[Handlebars][handlebars]
+   
 [netbeans]: http://netbeans.org  
 [node]: https://nodejs.org 
+[node-http]: https://nodejs.org/dist/latest-v6.x/docs/api/http.html 
+[node-doc]: https://nodejs.org/dist/latest-v6.x/docs/api/index.html
 [express]: http://expressjs.com  
+[express-api]: http://expressjs.com/en/4x/api.html
+[body-parser]: https://www.npmjs.com/package/body-parser
 [handlebars]: http://handlebarsjs.com
+[express-handlebars]:https://github.com/ericf/express-handlebars
 
+
+#### Kurssin tehtävien testeihin liittyviä tekniikoita
+
+[Mocha](https://mochajs.org)
+
+* [mocha (npm)](https://www.npmjs.com/package/mocha)
+
+[Node.js / Assert](https://nodejs.org/dist/latest-v6.x/docs/api/assert.html)
+
+[PhantomJS](http://phantomjs.org)
+
+* [phantomjs-prebuilt (npm)](https://www.npmjs.com/package/phantomjs-prebuilt)
+
+[Selenium WebDriver](http://www.seleniumhq.org/docs/03_webdriver.jsp)
+
+* [JavaScript API](http://seleniumhq.github.io/selenium/docs/api/javascript/)
+* [selenium-webdriver (npm)](https://www.npmjs.com/package/selenium-webdriver)
+* [selenium-webdriver/phantomjs note](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/phantomjs.html)
 
 #### Tietokantojen perusteita yliopistoissa
 

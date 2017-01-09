@@ -21,7 +21,7 @@ collections:
     permalink: /:collection/:path/
     nimi: Osa 1
     otsikko: Kehitysympäristö
-    julkaisu: 9.1.2017
+    julkaisu: 11.1.2017
     
   osa2:
     output: true
