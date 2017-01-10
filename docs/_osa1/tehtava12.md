@@ -106,4 +106,13 @@ module.exports = function (url) {
 Moduulista näkyy ulospäin se, mikä on sijoitettu `exports`-muuttujan arvoksi so. tässä funktio, joka palauttaa kokonaisluvun `9`. Jos moduuli otetaan käyttöön lauseella `var count = require('counter')`, tunnisteen `count` kautta on käytettävissä moduulin määrittelemä funktio.
 
 
+#### Muutoksia
+
+170110
+
+* uusi projektipohja
+
 <br/>
+
+#### Alaviitteet
+

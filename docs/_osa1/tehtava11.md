@@ -99,7 +99,7 @@ const server = http.createServer( function(req, res) {
 {% endhighlight %}
 
 
-Funktiolla on kaksi parametria: `http.IncomingMessage`-tyyppinen `req` ("request") ja `http.ServerResponse`-tyyppinen `res` ("response"). Tässä `res`-olion avulla muodostetaan pyyntöön annetava vaste - paluukoodi, palautettavan sisällön tyyppi sekä paluuviestin varsinainen sisältö:
+Funktiolla on kaksi parametria: `http.IncomingMessage`-tyyppinen `req` ("request") ja `http.ServerResponse`-tyyppinen `res` ("response"). Tässä `res`-olion avulla muodostetaan pyyntöön annetava vaste: paluukoodi, palautettavan sisällön tyyppi sekä paluuviestin varsinainen sisältö:
 
 
 {% highlight javascript %}
@@ -129,7 +129,7 @@ Pohjakoodissa ei hyödynnetä `req` -oliota, mutta se on tarpeellinen tehtävän
 
 Tehtäväpohjissa voi olla mukana kahdenlaisia testejä: yksikkötestejä ja kokonaisuutta testaavia Selenium -testejä. Testeihin liittyvät valinnat tulevat näkyviin IDE:ssä klikattaessa hiiren oikealla napilla projektia *Projects* -ikkunassa: *Test* (yksikkötestien ajo)  ja *Run Selenium Tests*. 
 
-Testien ajo edellyttää, että kehitysympäristöön on asennettu tarvittavat ohjelmistopaketit: [Mocha][mocha], [Selenium Web-Driver][web-driver] ja [PhantomJS][phantom]. Yksikkötestien ajamiseen riittää *Mocha*, mutta Selenium-testit edellyttävät myös kahta jälkimmäistä, jolloin *Selenium* ohjaa *Phantom*-selainta, joka on yhteydessä kehitettävään sovellukseen. Paketit voi asentaa omaan kehitysympäristöön `npm`-komennolla[^4], joka tulee Node-asennuksen mukana.
+Testien ajo edellyttää, että projektiin on asennettu tarvittavat ohjelmistopaketit: [Mocha][mocha], [Selenium Web-Driver][web-driver] ja [PhantomJS][phantom]. Yksikkötestien ajamiseen riittää *Mocha*, mutta Selenium-testit edellyttävät myös kahta jälkimmäistä, jolloin *Selenium* ohjaa *Phantom*-selainta, joka on yhteydessä kehitettävään sovellukseen. Projektissa olevaan tiedostoon `package.json` on kuvattu nämä riippuvuudet siten, että paketit voidaan asetaan projektivalikon valinnalla *npm Install* (tai *Resolve Project Problems ...*).
 
 [mocha]: https://mochajs.org
 [web-driver]: http://www.seleniumhq.org/docs/03_webdriver.jsp
@@ -143,8 +143,15 @@ Testien ajo edellyttää, että kehitysympäristöön on asennettu tarvittavat o
 
 Jotta testien ajo Netbeansista käsin onnistuu, kehitettävällä projektilla on oltava tieto, minkä tuella projektin testit ajetaan. Tässä sekä yksikkö- että Selenium -testien *Test Provider* on *Mocha*. Määrityksen voi tehdä ao. kohdassa ikkunassa, joka tulee esiin projektivalikon *Properties*-valinnalla.
 
-Selenium -testit edellyttävät, että testattava sovellus on käynnissä, mutta yksikkötestaus onnistuu ilman sovelluksen ajoa. Tässä tehtävässä on mukana sekä yksikkötesti että Selenium -testejä. Tosin yksikkötesti onnistuu aina ilmoittaen, että "ei sisällä yksikkötestejä". Jos Selenium-testi epäonnistuu, saatava virheilmoitus on seuraavanlainen: "TimeoutError: Wait timed out after 500ms". Tämä tarkoittaa sitä, että testi on tehnyt sovellukselle pyynnön, mutta ei ole saanut siltä puolessa sekunnissa odotettua vastetta. Testien ajon tulokset ilmestyvät NetBeansin *Test Results* -ikkunaan.
+Selenium -testit edellyttävät, että testattava sovellus on käynnissä, mutta yksikkötestaus onnistuu ilman sovelluksen ajoa. Tässä tehtävässä on mukana sekä yksikkötesti että Selenium -testejä. Tosin yksikkötesti onnistuu aina ilmoittaen, että "ei sisällä yksikkötestejä". Testien ajon tulokset ilmestyvät NetBeansin *Test Results* -ikkunaan, joka tulee esiin automaattisesti, jos testit epäonnistuvat.
+
+#### Muutoksia
+
+170110
+
+* uusi projektipohja ja sen edellyttämät muutokset tehtäväkuvaukseen
 
 <br/>
 
+#### Alaviitteet
 

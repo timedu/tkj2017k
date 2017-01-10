@@ -38,10 +38,12 @@ site_menu: 1
 [Express][express]   
 
 * [API Reference][express-api]
-* [express-handlebars][express-handlebars]
 * [body-parser][body-parser]
 
 [Handlebars][handlebars]
+   
+* [express-handlebars][express-handlebars]
+   
    
 [netbeans]: http://netbeans.org  
 [node]: https://nodejs.org 
@@ -53,6 +55,7 @@ site_menu: 1
 [handlebars]: http://handlebarsjs.com
 [express-handlebars]:https://github.com/ericf/express-handlebars
 
+<https://docs.npmjs.com>
 
 #### Kurssin tehtävien testeihin liittyviä tekniikoita
 
