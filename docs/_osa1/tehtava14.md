@@ -55,7 +55,7 @@ Pohjassa oleva *counter* -moduuli tarjoaa seuraavat kolme metodia.
 * `getRequests`: palauttaa polun pyyntöjen määrän
 * `getRequestsAll`: palauttaa objektin, joka sisältää kaikkien polkujen pyyntöjen määrät
 
-**Palauta** tehtävän ratkaisuna tiedostot `main.js` ja `summary.hbs`. Varmista ennen palautusta, että tehtäväpohjassa olevat testit menevät läpi. Selenium-testit testaavat sovellusta kokonaisuutena. Yksikkötestaus testaa counter-moduulia, vaikka se ei sisällykään palautettavaan aineistoon.
+**Palauta** tehtävän ratkaisuna tiedostot `main.js` ja `summary.hbs`. Varmista ennen palautusta, että tehtäväpohjassa olevat testit menevät läpi. Selenium-testit testaavat sovellusta kokonaisuutena. Yksikkötestaus testaa counter-moduulia, vaikka se ei sisällykään palautettavaan aineistoon. Selenium-testien osalta on huomioitava, että **sovellus on käynnistettävä uudelleen** ennen testien ajoa.
 
 ### Vihjeitä ja lisätietoja
 
