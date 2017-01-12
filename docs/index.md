@@ -27,7 +27,9 @@ layout: site_index
 
 Kurssi *ensimmäinen osa* tutustuttaa kurssilla käyttettavään kehitystyön peruskalustoon. *Toisessa osassa* siirrytään tietokantakäsittelyyn. Esillä on relaatiotietokanta ja sen käyttö sovellusohjelmissa siten, että tietokannan tiedot näkyvät tyypillisinä ohjelmointikielen objekteina. Kurssin osissa 3-6 on esillä neljä NoSQL-tietokantojen  perustyyppiä: *avain-arvopari*, *dokumentti*, *graafi* ja *sarakeperhe*. *Viimeisessä osassa* tarkastelun kohteena on hybriditietokanta, jossa on sekä dokumentti- että graafitietokannan ominaisuudet. Näiden lisäksi esimerkkinä olevalla järjestelmällä on vielä oliopiirteitä.
 
+#### Lisätietoja
 
+[Kurssin konteksti](konteksti)   
 [Suorituksen arvostelu](arvostelu)
 
 ~~~
