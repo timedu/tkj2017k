@@ -1,7 +1,7 @@
 ---
 layout: exercise_page
 title: "Tehtävä 1.3: Hello Handlebars"
-exercise_template_name: "W1E03.HelloHandlebars"
+exercise_template_name: "W1E03.Hellohandlebars"
 exercise_discussion_id: 72802
 exercise_upload_id: 300104
 ---
