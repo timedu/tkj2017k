@@ -8,6 +8,12 @@ site_menu: 1
 #### Tietokantateknologioita
 
 [SQLite][sqlite]  
+
+* [SQL As Understood By SQLite](https://www.sqlite.org/lang.html)
+* [node-sqlite3](https://github.com/mapbox/node-sqlite3), [API](https://github.com/mapbox/node-sqlite3/wiki/API)
+* [SQLite Manager (Firefox lisäosa)](https://addons.mozilla.org/fi/firefox/addon/sqlite-manager/)
+* [DB Browser for SQLite](http://sqlitebrowser.org)
+
 [Sequelize][sequelize]
 
 [Redis][redis]   
@@ -30,15 +36,14 @@ site_menu: 1
 #### Muita aineistossa esillä olevia ohjelmistoteknologioita
 
 [NetBeans IDE][netbeans]  
-[Node.js][node]  
 
-* [Documentation][node-doc]:
-[HTTP][node-http]
+[Node][node] & [Express][express]   
 
-[Express][express]   
+* [Node Documentation][node-doc]: [HTTP][node-http]
+* [Express API Reference][express-api]
 
-* [API Reference][express-api]
 * [body-parser][body-parser]
+* [csvtojson](https://www.npmjs.com/package/csvtojson)
 
 [Handlebars][handlebars]
    

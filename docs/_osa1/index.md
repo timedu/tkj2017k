@@ -42,7 +42,7 @@ Tämä osan tehtävien tarkoituksena on tutustuttaa osallistujat kurssilla käyt
 
 {% include exercises_list.md %}
 
-Tehtävien 1.1 - 1.3 ratkaisut ovat yksisivuisia, jotka tervehdysten tulostamisen ohella laskevat sovelluksen eri polkuihin kohdistuvia pyyntöjä. [Tehtävä 1.1](tehtava11) toteutetaan perus-Nodella. [Tehtävässä 1.2](tehtava12) otetaan käyttöön *Express* -sovelluskehys. Samalla sovelluksen toteuttama laskenta siirretään erilliseen moduuliin. [Tehtävässä 1.3](tehtava12) selaimelle välitettävä tuotos hahmonnetaan *Handlebars* -sivupohjien avulla.
+Tehtävien 1.1 - 1.3 ratkaisut ovat yksisivuisia, jotka tervehdysten tulostamisen ohella laskevat sovelluksen eri polkuihin kohdistuvia pyyntöjä. [Tehtävä 1.1](tehtava11) toteutetaan perus-Nodella. [Tehtävässä 1.2](tehtava12) otetaan käyttöön *Express* -sovelluskehys. Samalla sovelluksen toteuttama laskenta siirretään erilliseen moduuliin. [Tehtävässä 1.3](tehtava13) selaimelle välitettävä tuotos hahmonnetaan *Handlebars* -sivupohjien avulla.
 
 Tehtävissa 1.4 - 1.5 sovelukseen lisätään toinen sivu, joka esittää yhteenvedon eri polkuihin tulleista pyynnöistä. [Tehtävässä 1.4](tehtava14) määritellään pyyntöpolkuja, joihin tuleviin kutsuihin reagoidaan toisistaan poikkeavalla tavalla.  [Tehtävässä 1.5](tehtava15) sama sovellus jäsennetään *MVC*-arkkitehtuurimallin[^2] mukaan.
 

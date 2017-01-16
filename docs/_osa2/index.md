@@ -10,3 +10,8 @@ kesken: 1
 [sqlite]: https://www.sqlite.org
 [sequelize]: http://www.sequelizejs.com
 
+
+### Tehtävät
+
+
+{% include exercises_list.md %}
