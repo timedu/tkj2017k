@@ -2,8 +2,8 @@
 layout: exercise_page
 title: "Tehtävä 2.1: Kurssit ja opettajat, SQL"
 exercise_template_name: W2E01.KurssitJaOpettajatSQL
-exercise_discussion_id: 
-exercise_upload_id: 
+exercise_discussion_id: 73563
+exercise_upload_id: 307537
 ---
 
 Pohjakoodissa oleva tietokanta sisältää kaksi tietokantataulua: *Kurssi* ja *Opettaja*. Opettajalla voi olla useita kursseja, mutta kurssilla on enintään yksi opettaja. Laadi sovellus, jolla voidaan tarkastella tietokannan sisältämää tietoa. Sovellus käyttäytyy seuraavan sivukartan (Kuva 1) mukaan.

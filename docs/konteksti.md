@@ -6,7 +6,7 @@ permalink: /konteksti/index.html
 
 Ohjelmistotuotanto[^0] on tietotekniikkaa ja johtamista integroiva oppiaine, johon sisältyy olennaisina osina *ohjelmistokehitys* ja *ohjelmistojohtaminen*. *Tietokantajärjestelmät* on opintojakso, joka käsittelee *ohjelmistokehitystä* tähtäimenä tuottaa tietokantoihin perustuvia tietojärjestelmiä. Kurssi antaa valmiuksia käytännön ohjelmistotyöhön tehtäviin, joita rekrytointi-ilmoituksissa  kuvataan termein *database-/backend developer*, *database designer* ja *software architect*.
 
-[^0]: *"Asiakkaan kohtuulliset odotukset täyttävien tietokoneohjelmien tuottaminen siten, että kehityskustannukset ja aikataulu ovat ennustettavissa riittävällä tarkkuudella"* (Haikala & Mikkonen, 2011)
+[^0]: Ohjelmistotuotanto: *"Asiakkaan kohtuulliset odotukset täyttävien tietokoneohjelmien tuottaminen siten, että kehityskustannukset ja aikataulu ovat ennustettavissa riittävällä tarkkuudella"* (Haikala & Mikkonen, 2011)
 
 Seuraavassa kuvataan lyhyesti ensin, miten *Tietokantajärjestelmät* liittyy TTY Porin ohjelmistotekniikan opintoihin ja sitten, mitä ohjelmistotuotannon osa-alueita kurssi sivuaa.
 
