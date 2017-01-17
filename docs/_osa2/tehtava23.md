@@ -4,7 +4,7 @@ title: "Tehtävä 2.3: Kurssit ja opettajat, CRUD"
 exercise_template_name: 
 exercise_discussion_id: 73565
 exercise_upload_id: 307539
-julkaisu: 17.1.2017
+julkaisu: 18.1.2017
 kesken: 1
 ---
 
