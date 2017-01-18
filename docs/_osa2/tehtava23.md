@@ -68,10 +68,7 @@ Tietokanta sijaitsee projektin `database`-kansiossa nimellä `koulu.sqlite`[^3].
 
 [^3]: `databases`-kansio näkyy NetBeansin *Files*-ikkunassa, mutta ei *Projects*-ikkunassa
 
-**Palauta** tehtävän ratkaisuna tiedostot `kurssiController.js` ja `opettajaController.js`. Varmista ennen palautusta, että tehtäväpohjassa olevat Selenium-testit menevät läpi[^4]. Sovelluksen on oltava käynnissä testejä ajettaessa ja tietokannan tulee olla alkutilassaan.
-
-[^4]: testit eivät tosin testaa ylläpito-operaatioita, joten niiden todentaminen ja kelpoistaminen tulee suorittaa sovellusta ajamalla
-
+**Palauta** tehtävän ratkaisuna tiedostot `kurssiController.js` ja `opettajaController.js`. Varmista ennen palautusta, että tehtäväpohjassa olevat Selenium-testit menevät läpi. Sovelluksen on oltava käynnissä testejä ajettaessa ja tietokannan tulee olla alkutilassaan.
 
 
 ### Vihjeitä ja lisätietoja
@@ -222,6 +219,11 @@ Muutos tietokantaan voidaan toteuttaa [`update`][update]-metodilla, jonka suorit
 
 [instances]: http://docs.sequelizejs.com/en/v3/docs/instances/
 
+#### Muutoksia
+
+170119
+
+* uusi projektipohja (kattavammat testit; korjauksia näkymiin)
 
 
 <br/>
