@@ -238,8 +238,7 @@ Muutos tietokantaan voidaan toteuttaa [`update`][update]-metodilla, jonka suorit
 
 [Tehtäväpohjan tähän versioon][uusi_pohja] on tehty tiettyjä arkkitehtuuritason muutoksia. Tehävän ratkaisun voi laatia tähän [uuteen pohjaan][uusi_pohja] tai siihen, jonka voi ladata sivun alussa olevasta linkistä. Uutta pohjaa käytettäessä tehtävän **ratkaisuna palautetaan** zip-arkistoituna sovelluksen lähdekoodin `controllers`-kansio.
 
-
-[uusi_pohja]: #
+[uusi_pohja]: /tkj2017k/pohjat/W2E03.KurssitJaOpettajatCRUD.v2.zip
 
 
 Lähdekoodi rakentuu seuraavasti:
