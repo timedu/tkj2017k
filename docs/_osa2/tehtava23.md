@@ -6,6 +6,11 @@ exercise_discussion_id: 73565
 exercise_upload_id: 307539
 ---
 
+
+> Tehtävälle on käytettävissä myös toinen, arkkitehtuuriltaan hieman erilainen, pohjakoodi, jonka voi halutessaan ottaa oman ratkaisun lähtökohdaksi (ks. sivun lopussa kohta [Tehtävän pohjakoodi, versio 170121](#tehtvn-pohjakoodi-versio-170121)).
+
+
+
 Täydennä [Tehtävän 2.2](../tehtava22) ratkaisua[^1] siten, että se sisältää toiminnot tietokannan tietojen ylläpitoa[^2] varten.   
 
 [^1]: tietojen kyselyihin liittyen tässä on edellisiin tehtäviin verrattuna sellainen pieni muutos, että yksittäisen kurssin tiedot haetaan `id`-attribuutin perusteella `tunnus`-attribuutin sijaan 
@@ -216,14 +221,66 @@ Muutos tietokantaan voidaan toteuttaa [`update`][update]-metodilla, jonka suorit
 [create]: http://docs.sequelizejs.com/en/v3/api/model/#createvalues-options-promiseinstance
 [destroy]: http://docs.sequelizejs.com/en/v3/api/instance/#destroyoptions-promiseundefined
 
-
 [instances]: http://docs.sequelizejs.com/en/v3/docs/instances/
 
 #### Muutoksia
 
+170121
+
+* uusi projektipohja (sivun alussa olevan linkin kohdetta ei kuitenkaan ole muutettu);  ks. tarkemmin alla kohdassa "Tehtävän pohjakoodi, versio 170121
+
+
 170119
 
 * uusi projektipohja (kattavammat testit; korjauksia näkymiin)
+
+#### Tehtävän pohjakoodi, versio 170121
+
+[Tehtäväpohjan tähän versioon][uusi_pohja] on tehty tiettyjä arkkitehtuuritason muutoksia. Tehävän ratkaisun voi laatia tähän [uuteen pohjaan][uusi_pohja] tai siihen, jonka voi ladata sivun alussa olevasta linkistä. Uutta pohjaa käytettäessä tehtävän **ratkaisuna palautetaan** zip-arkistoituna sovelluksen lähdekoodin `controllers`-kansio.
+
+
+[uusi_pohja]: #
+
+
+Lähdekoodi rakentuu seuraavasti:
+
+~~~
+Sources
+ ├── main.js
+ ├── configs
+ │     ├── log.js 
+ │     ├── db_connection.js 
+ │     ├── db_seed.js 
+ │     └── db_seed 
+ │           ├── kurssit.csv 
+ │           └── opettajat.csv  
+ ├── controllers
+ │     ├── kurssit.js 
+ │     ├── opettajat.js 
+ │     ├── kurssit 
+ │     │    ├── kurssit_insert.js  
+ │     │    ├── kurssit_remove.js 
+ │     │    ├── kurssit_select.js  
+ │     │    └── kurssit_update.js   
+ │     └── opettajat 
+ │          ├── opettajat_insert.js  
+ │          ├── opettajat_remove.js 
+ │          ├── opettajat_select.js  
+ │          └── opettajat_update.js   
+ ├── models
+ │     ├── Kurssi.js 
+ │     └── Opettajat.js  
+ └── views
+~~~
+
+<small>Kuva 4. Sovelluksen lähdekoodin struktuuri (versio 170121).</small>
+
+
+Kuten aiemmin niin myös tässä tehtävänä on täydentää sovelluksen kontrollerien funktioiden runkoja. Tässä konrollerit on jatettu koodirivimäärältään pienempiin moduuleihin. Täydennettävät tiedostot löytyvät `kurssit`- ja `opettajat`-kansioista.
+
+Sovellus rakentuu nyt niin, että tiedostot `kurssit.js`  ja `opettajat.js` määrittelevät polut, joihin sovellus reagoi hakemistoisaa `korssit` ja `opettajat` olevien tiedostojen koodilla. Määritellyt polut kytketään sovellukseen päämoduulissa `main.js`.
+
+Käsiteltävä tietokanta tässä luodaan ORM:n avulla. Pohjan edellisessä versiossa olevan `models/mappins.js` -tiedoston sisältö on jaettu tiedostoihin `models/Kurssi.js`, `models/Opettaja.js` ja `configs/db_connection.js`.
 
 
 <br/>
