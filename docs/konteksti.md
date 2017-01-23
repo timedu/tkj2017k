@@ -16,12 +16,13 @@ Seuraavassa kuvataan lyhyesti ensin, miten *Tietokantajärjestelmät* liittyy TT
 
 ~~~
 
-  Ohjelmointitekniikka   ⎹   Mobiiliohjelmointi      ⎹  
-  Olio-ohjelmointi       ⎹   Sulautetut järjestelmät ⎹  Ohjelmistoprojekti
-  Tietorakenteet         ⎹   Tietokantajärjestelmät  ⎹ 
-  ⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼ ⎹   Web-palvelinohjelmointi ⎹
-  Tiedonhall. ja tietok. ⎹   Web-selainohjelmointi   ⎹
-  Web-ohjelmointi        ⎹                           ⎹ 
+  Ohjelmointitekniikka   ⎹                          ⎹     
+  Olio-ohjelmointi       ⎹  Mobiiliohjelmointi      ⎹  
+  Tietorakenteet         ⎹  Sulautetut järjestelmät ⎹ 
+  ⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼ ⎹  Tietokantajärjestelmät  ⎹  Ohjelmistoprojekti
+  Tiedonhall. ja tietok. ⎹  Web-palvelinohjelmointi ⎹
+  Web-ohjelmointi        ⎹  Web-selainohjelmointi   ⎹ 
+  Käyttäjäkesk. suun.    ⎹                          ⎹  
   
 ~~~
 *Kaavio 1.*
