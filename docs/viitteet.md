@@ -16,6 +16,12 @@ site_menu: 1
 
 [Sequelize][sequelize]
 
+[LevelDB](http://leveldb.org)
+
+* [LevelUP](https://github.com/Level/levelup/blob/master/README.md)
+*  [Node.js Databases: An Embedded Database Using LevelDB](https://blog.yld.io/2016/10/24/node-js-databases-an-embedded-database-using-leveldb) (Pedro Teixeira, 2016)
+
+
 [Redis][redis]   
 [MongoDB][mongodb]  
 [Neo4j][neo4j]  
