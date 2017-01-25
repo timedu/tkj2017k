@@ -64,7 +64,7 @@ Esim. *avaimella* `ks` tietokannasta löytyy seuraava `json`-muotoinen *arvo*:
 <small>Listaus 1. Opettaja tietokannassa (esimerkki)</small>
 
 
-Opettajaan liittyvä *arvo* sisältää opettajan perustietojen lisäksi myös opettajan kurssien tunukset ja nimet (*Listaus 1*). Avaimet `aa`-`zz`on tietokannassa varattu opettajille.
+Opettajaan liittyvä *arvo* sisältää opettajan perustietojen lisäksi myös opettajan kurssien tunnukset ja nimet (*Listaus 1*). Avaimet `aa`-`zz`on tietokannassa varattu opettajille.
 
 *Avaimella* `PLA-32610` tietokannasta löytyy seuraava `json`-muotoinen *arvo*:
 

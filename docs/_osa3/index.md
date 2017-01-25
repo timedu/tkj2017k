@@ -2,7 +2,7 @@
 layout: collection_index
 permalink: /:collection/index.html
 kesken: 1
-julkaisu: 25.1.2017
+julkaisu: 26.1.2017
 ---
 
 <http://leveldb.org>
