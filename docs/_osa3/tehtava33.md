@@ -61,7 +61,7 @@ Tehtävässä tietokanta jäsentyy seuraavasti:
 
 [^1]: Ei toteuteta tähän ratkaisuun
 
-**Palauta** tehtävän ratkaisuna tiedosto `models/Kurssi.js`. Varmista ennen palautusta, että sovellus toimii tehtäväkuvauksen mukaan sovellusta ajamalla. Tehtävänpohja ei sisällä testikoodia. 
+**Palauta** tehtävän ratkaisuna tiedosto `models/Opettaja.js`. Varmista ennen palautusta, että sovellus toimii tehtäväkuvauksen mukaan sovellusta ajamalla. Tehtävänpohja ei sisällä testikoodia. 
 
 ### Vihjeitä ja lisätietoja
 
