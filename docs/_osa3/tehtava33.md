@@ -30,9 +30,36 @@ Sovellukseen liittyy loki, jota varten lähdekoodi sisältää oman näkymän, `
 <small>Kuva 1. Sovelluksen mallit</small>
 
 
-Sovellus on rakennettu valmiiksi lukuunottamatta tietostoa `models/Opettaja.js`, joka sekin sisältää ratkaisussa hyödynnettävissä olevaa koodia. 
+Sovellus on rakennettu valmiiksi lukuun ottamatta tietostoa `models/Opettaja.js`, joka sekin sisältää ratkaisussa hyödynnettävissä olevaa koodia. 
 
+Tehtävässä tietokanta jäsentyy seuraavasti:
 
+~~~
+  +---------------+  
+  |     base      |  
+  +-------+-------+  
+          |
+          +------------------------------------------+
+          |                                          |
+  +-------+-------+                          +-------+-------+
+  |    kurssit    |                          |    opettajat  |
+  +-------+-------+                          +-------+-------+
+          |                                          |
+          +---------------------+                    |
+          |                     |                    |
+  +-------+-------+     +-------+-------+    +-------+-------+
+  |<opettaja-cuid>| ... |<opettaja-cuid>|    |    del_loki   |
+  +---------------+     +---------------+    +---------------+
+~~~
+<small>Kuva 2. Tietokannan rakenne</small>
+
+`base` on tietokannan päätaso, jolla on kaksi alitasoa, `kurssit` ja `opettajat`, sisältäen nimitystensä mukaiset tiedot (*avain-arvoparit*). Avaimet muodostetaan tässä [`cuid`][cuid]-funktiolla, joka palauttaa yksilöllisiä tunnisteita. Arvot ovat json-muodossa olevia merkkijonoja. Osana yksittäisen kurssin *arvoa* on `opettaja`-attribuutti, joka sisältää kurssin opettajan *avaimen*.
+
+[cuid]: https://github.com/ericelliott/cuid/blob/master/README.markdown#cuid
+
+*Kuvassa 2* `kurssit`-tason alapuolella on otsikolla `<opettaja-cuid>` esitettyjä elementtejä, missä otsikolla viitataan opettajan *avaimeen*. Näissä elementeissä (*alitasoissa*) kurssin tiedot on talletettu opettajittain. `opettajat`-tason alapuolella oleva `del_loki` sisältää tietokannasta poistettujen opettajien *avaimet* erillistä "roskien keruuta"[^1] varten. 
+
+[^1]: Ei toteuteta tähän ratkaisuun
 
 **Palauta** tehtävän ratkaisuna tiedosto `models/Kurssi.js`. Varmista ennen palautusta, että sovellus toimii tehtäväkuvauksen mukaan sovellusta ajamalla. Tehtävänpohja ei sisällä testikoodia. 
 
@@ -43,6 +70,6 @@ Sovellus on rakennettu valmiiksi lukuunottamatta tietostoa `models/Opettaja.js`,
 
 <https://blog.yld.io/2016/10/24/node-js-databases-an-embedded-database-using-leveldb/#usinglevelsublevel>
 
-
+<br/>
 
 
