@@ -4,8 +4,6 @@ title: "Tehtävä 3.3: Kurssit ja opettajat, Sub-levels"
 exercise_template_name: W3E03.KurssitJaOpettajatSubLevels
 exercise_discussion_id: 74591
 exercise_upload_id: 308965
-kesken: 1
-julkaisu: 26.1.2017
 ---
 
 Laadi  ulkoisilta ominaisuksiltaan [tehtävän 3.2](../tehtava32) ratkaisua vastaava sovellus, joka taustalla on edelliseen tehtävään verrattuna hieman erirakenteinen tietokanta. Tässä tukeudutaan Noden LevelDB rajapinnan laajennukseen, jolla tietokannan sisältö voidaan jäsentää jossain määrin relaatiotietokannan tauluja muistuttaviin osiin. Samalla hyödynnetään erillistä node-pakettia, jolla voidaan muodostaa tietokannan tiedoille yksilöllisiä tunnisteita.
