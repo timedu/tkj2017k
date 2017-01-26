@@ -2,8 +2,8 @@
 layout: exercise_page
 title: "Tehtävä 3.3: Kurssit ja opettajat, Sub-levels"
 exercise_template_name: W3E03.KurssitJaOpettajatSubLevels
-exercise_discussion_id: 
-exercise_upload_id: 
+exercise_discussion_id: 74591
+exercise_upload_id: 308965
 kesken: 1
 julkaisu: 26.1.2017
 ---

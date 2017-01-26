@@ -2,8 +2,8 @@
 layout: exercise_page
 title: "Tehtävä 3.2: Kurssit ja opettajat, CRUD"
 exercise_template_name: W3E02.KurssitJaOpettajatLevelCRUD
-exercise_discussion_id: 
-exercise_upload_id: 
+exercise_discussion_id: 74590
+exercise_upload_id: 308964
 ---
 
 Täydennä [tehtävän 3.1](../tehtava31) ratkaisua ominaisuuksiltaan siten, että sovelluksella voi opettaja- ja kurssitietojen tarkastelun ohella ylläpitää (*lisäys*, *muutos*, *poisto*) opettajatietoja. Tässä käsiteltävän tietokannan rakenne on myös hieman erilainen.

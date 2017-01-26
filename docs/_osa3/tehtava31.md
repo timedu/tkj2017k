@@ -2,8 +2,8 @@
 layout: exercise_page
 title: "Tehtävä 3.1: Kurssit ja opettajat, LevelDB"
 exercise_template_name: W3E01.KurssitJaOpettajatLevel
-exercise_discussion_id: 
-exercise_upload_id: 
+exercise_discussion_id: 74589
+exercise_upload_id: 308962
 ---
 
 Laadi [LevelDB][LevelDB][^1]-tietokantaa käsittelevä sovellus, joka käyttäytyy [Tehtävän 2.1]({{site.baseurl}}/osa2/tehtava21) ratkaisun tapaan.
