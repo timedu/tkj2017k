@@ -30,7 +30,8 @@ Kurssi *ensimmäinen osa* tutustuttaa kurssilla käyttettavään kehitystyön pe
 #### Lisätietoja
 
 [Kurssin konteksti](konteksti)   
-[Suorituksen arvostelu](arvostelu)
+[Suorituksen arvostelu](arvostelu)   
+[Koodin katselmointipyynnöt](https://moodle2.tut.fi/mod/forum/discuss.php?d=74758)   
 
 ~~~
 sivusto täydentyy ja päivittyy kurssitoteutuksen edetessä
