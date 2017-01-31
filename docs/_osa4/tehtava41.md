@@ -4,8 +4,6 @@ title: "Tehtävä 4.1: Kurssit ja opettajat, TingoDB 1"
 exercise_template_name: W4E01.KurssitJaOpettajatTingo1
 exercise_discussion_id: 
 exercise_upload_id: 
-julkaisu: 31.1.2017
-kesken: 1
 ---
 
 Laadi  ulkoisilta ominaisuksiltaan [tehtävän 3.3](../../osa3/tehtava33) ratkaisua vastaava sovellus. Avain-arvoparitietokannan sijaan tässä käytetään kuitenkin [TingoDB][tingo] -dokumettitietokantaa, jonka sovellusrajapinta on yhteensopiva [MongoDB:n rajapinnan][mongo-api] kanssa[^0].
@@ -74,9 +72,160 @@ Kaikki sivuilla esitetyt luettelot ovat nousevassa aakkosjärjestyksessä. Sovel
 
 ### Vihjeitä ja lisätietoja
 
-...
+Tässä käytetään tietokantaa sen kokoelmiin viittaavien tunisteiden kautta. TingoDB tarjoaa kokoelmiin liittyen esim. seuraavia metodeja: `insert`, `findOne`, `find`, `update`, `save` ja `remove`. Metodien kuvaukset löytyvät Mongon API-dokumenteista kohdasta [Collection][Collection]. 
+
+[Collection]: http://mongodb.github.io/node-mongodb-native/2.2/api/Collection.html
+
+#### Dokumenttien kysely
+
+Seuraavissa *listauksissa 1 ja 3* on tehtäväpohjasta poimitut esimerkit `find` ja `findOne`-metodien käytöstä. 
 
 
+{% highlight javascript %}
+
+Kurssi.findAll = (callback) => {
+   db.kurssit.find().sort({'nimi': 1}).toArray((err, docs) => {
+      callback(docs);
+   });
+};
+
+
+{% endhighlight %}
+
+<small>Listaus 1.  Ote tiedostosta *models/Kurssi.js*</small>
+
+
+*Listauksen 1* määrittelevä funktio `Kurssi.findAll` lukee tietokannasta kaikki *Kurssi*-kokoelman dokumentit käyttäen *Collection*-olion `db.kurssit` metodia `find`, joka palauttaa [Cursor][Cursor]-olion. Tämä sisältää metodin `sort`, jonka avulla data voidaan lajitella, mikä tässä tapahtuu *nimen* mukaiseen nousevaan aakkosjärjestykseen. Myös `sort` palautta *Cursor*-olion, josta löytyy myös metodi `toArray`, millä kyselyn määrittelemä data saadaan kokonaisuudessaan taulukkomuotoon. Metodin parametrina on funktio, joka suoritetaan, kun kaikki tietojen hakuun liittyvät operaatiot on suoritettu. Funktio kutsuu tässä `Kurssi.findAll`-funktiolle parametrina annettavaa funktiota `callback`, jonka määrittelee kontrolleri (*Listaus 2*). 
+
+[Cursor]: http://mongodb.github.io/node-mongodb-native/2.2/api/Cursor.html
+
+
+{% highlight javascript %}
+
+router.get('/', (req, res) => {
+   Kurssi.findAll(kurssit => 
+      res.render('kurssi_list', {
+         kurssit: kurssit
+      });
+   });
+});
+
+{% endhighlight %}
+
+<small>Listaus 2.  Ote tiedostosta *controllers/kurssit.js*</small>
+
+
+*Listauksen 3* määrittelemä funktio `Kurssi.findByKey` lukee tietokannasta yhden *Kurssi*-dokumentin sen `_id`-attribuutin perusteella. Kurssin `opettaja`-attribuutissa on kurssin opettajaan liittyvän dokumentin `_id`. Tätä käyttäen luetaan kurssin opettajan tiedot kontrollerille palautettavien tietojen oheen. 
+
+
+{% highlight javascript %}
+
+Kurssi.findByKey = (_id, callback) => {
+   db.kurssit.findOne({'_id': _id}, (err, kurssi) => {
+      if (kurssi.opettaja) {
+         db.opettajat.findOne({'_id': kurssi.opettaja}, (err, opettaja) => {
+            kurssi.opettaja = opettaja;
+            callback(kurssi);
+         });
+      } else {
+         callback(kurssi);
+      }
+   });
+};
+
+{% endhighlight %}
+
+<small>Listaus 3.  Ote tiedostosta *models/Kurssi.js*</small>
+
+
+`findOne`-metodeille annetaan *Listauksessa 3* kaksi parametria: kyselyyn liittyvä valintaehto sekä funktio, joka suoritetaan, kun kyselyn palauttama data on käytettävissä.
+
+ Kontrolleri (*Listaus 4*) välittää *Listauksen 3* funktiolla haettavan kurssin tunnuksen sekä funktion, jota kutsumalla haun tulos välittyy kontrollerille ja edelleen näkymään.
+
+
+{% highlight javascript %}
+
+router.get('/:_id', (req, res) => {
+   Kurssi.findByKey(req.params._id, kurssi => {
+      res.render('kurssi_detail', {
+         kurssi: kurssi
+      });
+   });
+});
+
+{% endhighlight %}
+
+<small>Listaus 4.  Ote tiedostosta *controllers/kurssit.js*</small>
+
+
+#### Dokumenttien ylläpito
+
+
+Dokumentin lisäyksen kokoelmaan voi tehdä `insert`-metodilla seuraavaan tyyliin:
+
+
+{% highlight javascript %}
+
+collection.insert(doc, (err, docs) => {
+    // ...
+});
+
+{% endhighlight %}
+
+<small>Listaus 5.  *insert*-metodi</small>
+
+
+`insert`-metodin toisena parametrina annettava funktion `docs`-parametrin kautta palautuu lisätty dokumentti, jossa on mukana järjestelmän generoima `_id`. `docs` on taulukko, vaikka kokoelmaan lisätään vain yksi dokumentti. 
+
+
+Dokumentiin kohdistuneet muutokset tietokantaan voi tallettaa `save`-metodilla:
+
+
+{% highlight javascript %}
+
+doc._id = parseInt(doc._id);
+
+collection.save(doc, () => {
+    // ...
+});
+
+{% endhighlight %}
+
+<small>Listaus 6.  *save*-metodi</small>
+
+
+Tässä muutoksen talletuksen yhteydessä lienee kuitenkin syytä vielä varmistaa, että tietokantatunniste pysyy kokonaislukuna (*Listaus 6*).
+
+Poiston voi suorittaa `remove`-metodilla (*Listaus 7*). Poistoon liittyvä valintaehdon voi määritellä samoin kuin kyselyjen yhteydessä (ks. *Listaus 3*).
+
+{% highlight javascript %}
+
+collection.remove({...}, () => {
+    // ..
+});
+
+{% endhighlight %}
+
+<small>Listaus 7.  *remove*-metodi</small>
+
+
+Dokumenttijoukkoa koskevia muutoksia varten on `update` -metodi:
+
+
+{% highlight javascript %}
+
+collection.update( {...}, { $set: {'attribute': value} }, {multi: true}, 
+(err, result) => {
+      // ...
+});
+
+{% endhighlight %}
+
+<small>Listaus 8.  *update*-metodi</small>
+
+*Listauksen 8* periaate-esimerkissä metodilla on neljä parametria: valintaehto,  muutos-operaatio, optiot sekä funktio, joka suoritetaan, kun muutos tietokantaan on toteutettu. Funktion `result` -parametri palauttaa lukumäärän koskien dokumentteja, joihin muutos kohdistui. Muutoksena tässä on yhden attribuutin arvon asettaminen. 
+
+Valintaehdon yhteydessä tulisi  huomioida, että kokonaisluku ei ole välttämättä sama kuin vastaava kokonaisluku merkkijonona (vrt. *Listaus 6*).
 
 
 <br/>
