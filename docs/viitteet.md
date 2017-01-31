@@ -25,8 +25,12 @@ site_menu: 1
   
 [MongoDB][mongodb]  
 
+* [MongoDB Manual](https://docs.mongodb.com/manual/)
 * [MongoDB Node.JS Driver](http://mongodb.github.io/node-mongodb-native/)
+* [MongoDB for Node.js Developers](https://university.mongodb.com/courses/M101JS/about) (Online course)
 
+
+[TingoDB](http://www.tingodb.com)
 
 [Neo4j][neo4j]  
 [Cassandra][cassandra]  
@@ -95,6 +99,8 @@ site_menu: 1
 * [JavaScript API](http://seleniumhq.github.io/selenium/docs/api/javascript/)
 * [selenium-webdriver (npm)](https://www.npmjs.com/package/selenium-webdriver)
 * [selenium-webdriver/phantomjs note](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/phantomjs.html)
+
+<http://chaijs.com>
 
 #### Tietokantojen perusteita yliopistoissa
 

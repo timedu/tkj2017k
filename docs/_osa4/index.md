@@ -9,6 +9,8 @@ kesken: 1
 
 <http://www.tingodb.com>
 
+> TingoDB is embedded JavaScript NoSql database for Node.js and node-webkit. Its API and features designed to be upward compatible with MongoDB and its driver for Node.js. 
+
 ### Tehtävät
 
 
