@@ -278,6 +278,126 @@ Opettaja.update = (newVal, callback) => {
 
 [^1]: Tehtäväpohjassa kurssitietojen päivitysoperaatioita ops-taulukkoon keräävä kohta saattaa olla erheellisesti ao. if-rakenteen ulkopuolella. Tämä aikaansaa sen, että joukko päivityksiä suoritetaan turhaan (kurssille asetetaan arvo, joka on jo tietokannassa).
 
+
+#### Opettajan lisäys tietokantaan
+
+Tehtäväpohjassa on lisäyksen toteuttamista varten seuraavanlainen funktiorunko tiedostossa `models/Opettaja.js`:
+
+
+{% highlight javascript %}
+
+Opettaja.create = (opettaja, callback) => {
+
+   callback({});
+
+//   opettaja.tunnus = 'zy' + Math.round((1000000 * Math.random()));
+   
+};
+
+{% endhighlight %}
+
+<small>Listaus 9. </small>
+
+
+*Listauksessa 9* on kommentoituna koodi, jolla voidaan muodostaa *melkein* yksilöllisiä tunnisteita tietokantaan lisättäville opettajille niin, että tunnisteet osuvat tehtävässä opettajien tunnisteille varattuun haaruukkaan ('aa.'..'zz'). 
+
+
+Funktiota `Opettaja.create` käyttää tiedostossa  `controllers/opettajat.js` määritelty kontrolleri:
+
+
+{% highlight javascript %}
+
+router.post('/insert', (req, res) => {
+
+  // ...
+
+   Opettaja.create(req.body, (opettaja) => {
+      res.redirect('/opettajat/' + opettaja.tunnus);
+   });
+
+});
+
+
+{% endhighlight %}
+
+<small>Listaus 10. </small>
+
+
+*Listauksen 10* koodi välittää lisäyksen toteuttavalle funktiolle `Opettaja.create` kaksi parametria, joista ensimmäinen on lomakkeelta saatu opettaja, esim.
+
+{% highlight json %}
+
+{
+  "etunimi": "Bartholomeus",
+  "sukunimi": "Simpsonius"
+}
+
+{% endhighlight %}
+
+<small>Listaus 11. </small>
+
+
+Lisäyksen suoritettuaan `Opettaja.create` kutsuu *Listauksessa 10* toisena parametrina olevaa funktiota, joka ohjaa käsittelyn (esim.) osoitteeseen `/opettajat/zy123456`, missä `zy123456` on lisätylle opettajalle muodostettu tietokantatunnus. 
+
+
+Lisätty opettaja välittyy kontrollerille seuraavanlaisessa muodossa:
+
+{% highlight json %}
+
+{
+  "tunnus": "zy123456",
+  "etunimi": "Bartholomeus",
+  "sukunimi": "Simpsonius",
+  "kurssit": []
+}
+
+{% endhighlight %}
+
+<small>Listaus 11. </small>
+
+`Opettaja.create` tallettaa *Listauksen 11* kaltaisen objektin tietokantaan avaimella `zy123456`, mutta tietokannan toisteisuudesta johtuen funktion on myös päivitettävä tietokannassa avaimella `Opettajat` olevaa opettajaluetteloa (ks. *Listaus 4*).
+
+Lisäyksen jälkeen *avameilla* `Opettajat` oleva *arvo* tietokannassa on seuraavanlainen:
+
+
+{% highlight json %}
+
+{
+  ...
+  "rn":{"tunnus":"rn","sukunimi":"Rämeenperä","etunimi":"Niilo"},
+  "vk":{"tunnus":"vk","sukunimi":"Veto","etunimi":"Karri"},
+  "zy123456":{"tunnus":"zy123456","sukunimi":"Simpsonius","etunimi":"Bartholomeus"}
+}
+
+{% endhighlight %}
+
+<small>Listaus 12. </small>
+
+Tietokannasta on lisäyksen yhteydessä siis ensin luettava *avaimella* `Opettajat` oleva *arvo*, muutettava arvoa ja sitten kirjoitettava muutettu *arvo* tietokantaan.
+
+Arvon muutoksen voi toteuttaa seuraavanlaisella sijoituslauseella olettaen, että objekti `opettajat` sisältää *Listauksen 4* kaltaisen opettajaluettelon:
+ 
+
+{% highlight javascript %}
+
+opettajat['zy123456'] = {
+  "tunnus": "zy123456",
+  "etunimi": "Bartholomeus",
+  "sukunimi": "Simpsonius",
+}
+
+{% endhighlight %}
+
+<small>Listaus 13. </small>
+
+
+Tietokantaan suoritetaan tässä kaksi kirjoitusoperaatiota: arvot avaimilla `zy123456` ja `Opettajat`. Nämä tulisi niputtaa yhteen so. suorittaa kirjoitusoperaatiot tietokantarajapinnan `batch`-metodilla. *Listauksessa 8* on esimerkki `batch`-metodin käytöstä.
+
+
+#### Muutoksia
+
+* 170201: kohtaan *Vihjeitä ja lisätietoja* lisätty `Opettaja.create`-funktion toteuttamiseen liittyviä vinkkejä
+
 <br/>
 
 
