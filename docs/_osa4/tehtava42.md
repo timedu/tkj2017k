@@ -6,7 +6,7 @@ exercise_discussion_id:
 exercise_upload_id: 
 ---
 
-Laadi kyselyominaisuksiltaan [tehtävän 4.1](../tehtava41) ratkaisua vastaava sovellus. Teitokannan rakenne on edelliseen tehtävään verrattuna kuitenkin hieman erilainen. Samalla [TingoDB][tingo]:n korvaa toinen sovellukseen upotettava dokumenttitietokantaratkaisu, [NeDB][NeDB].
+Laadi kyselyominaisuksiltaan [tehtävän 4.1](../tehtava41) ratkaisua vastaava sovellus. Tietokannan rakenne on edelliseen tehtävään verrattuna kuitenkin hieman erilainen. Samalla [TingoDB][tingo]:n korvaa toinen sovellukseen upotettava dokumenttitietokantaratkaisu, [NeDB][NeDB].
  
 [tingo]: http://www.tingodb.com
 [NeDB]: https://github.com/louischatriot/nedb/blob/master/README.md
@@ -29,8 +29,7 @@ Laadi kyselyominaisuksiltaan [tehtävän 4.1](../tehtava41) ratkaisua vastaava s
 <small>Kuva 1. Sovelluksen mallit</small>
 
 
-Malleja, `models/Opettaja.js` ja `models/Kurssi.js`, sovellus on rakennettu valmiiksi. 
-Tietokanta jäsentyy tässä seuraavasti:
+Malleja, `models/Opettaja.js` ja `models/Kurssi.js`, lukuunottamatta sovellus on rakennettu valmiiksi. Tietokanta jäsentyy tässä seuraavasti:
 
 ~~~
   +---------------+    

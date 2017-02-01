@@ -27,6 +27,8 @@ site_menu: 1
 
 * [MongoDB Manual](https://docs.mongodb.com/manual/)
 * [MongoDB Node.JS Driver](http://mongodb.github.io/node-mongodb-native/)
+* [node-mongodb-native](https://github.com/mongodb/node-mongodb-native/blob/2.2/README.md)
+* <https://mlab.com>
 * [MongoDB for Node.js Developers](https://university.mongodb.com/courses/M101JS/about) (Online course)
 
 [NeDB](https://github.com/louischatriot/nedb/blob/master/README.md)   
