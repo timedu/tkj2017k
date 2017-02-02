@@ -120,7 +120,7 @@ Yksittäisten kurssi- ja opettaja-tietojen lisäksi tietokanta sisältää kurss
 <small>Listaus 4. Opettajaluettelo tietokannassa avaimella *Opettajat*</small>
 
 
-**Palauta** tehtävän ratkaisuna tiedosto `models/Opettaja.js`. Varmista ennen palautusta, että tehtäväpohjassa olevat Selenium-testit menevät läpi. Sovelluksen on oltava käynnissä testejä ajettaessa ja tietokannan alkutilassaan..
+**Palauta** tehtävän ratkaisuna tiedosto `models/Opettaja.js`. Varmista ennen palautusta, että tehtäväpohjassa olevat Selenium-testit menevät läpi. Sovelluksen on oltava käynnissä testejä ajettaessa ja tietokannan alkutilassaan.
 
 ### Vihjeitä ja lisätietoja
 

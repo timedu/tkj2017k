@@ -32,7 +32,7 @@ Tehtävissä jatketaan edelleen *kurssien ja opettajien* käsittelyä. Esillä o
 
 {% include exercises_list.md %}
 
-[Tehtävässä 4.1](tehtava41) tietokanta on jäsennetty kahdeksi dokumenttikoelmaksi, jotka vastaavat relaatiotietokannan tauluja. Tietokannan rakenne on muutenkin "relaatiomainen": *Kurssi*-dokumentintissa on attribuutti, johon on talletettu kurssin opettajaa vastaavan *Opettaja*-dokumentin tietokantatunniste. Tehtävässä toteutetaan tietokantaan liittyvät kyselyt sekä opettajatietojen osalta ylläpito-opetaatiot. Tietokanta on upotettu sovellukseen ja sitä käsitellään [TingoDB][TingoDB]-kirjastolla.
+[Tehtävässä 4.1](tehtava41) tietokanta on jäsennetty kahdeksi dokumenttikoelmaksi, jotka vastaavat relaatiotietokannan tauluja. Tietokannan rakenne on muutenkin "relaatiomainen": *Kurssi*-dokumentintissa on attribuutti, johon on talletettu kurssin opettajaa vastaavan *Opettaja*-dokumentin tietokantatunniste. Tehtävässä toteutetaan tietokantaan liittyvät kyselyt sekä opettajatietojen osalta ylläpito-operaatiot. Tietokanta on upotettu sovellukseen ja sitä käsitellään [TingoDB][TingoDB]-kirjastolla.
 
 [Tehtävän 4.2](tehtava42) tietokanta muodostuu yhdestä dokumenttikokoelmasta siten, että *Opettaja* esiintyy varsinaisena kokoelman dokumenttina, jonka attribuutin arvona on opettajan pitämien *kurssien* tiedot. Tehtävässä toteutetaan ainoastaan tietokantaan kohdistyvat kyselyt. Edellisen tehtävän tapaan tietokanta on upotettu sovellukseen, mutta sitä käsitellään Tingon sijaan [NeDB][NeDB]-kirjastolla.
 

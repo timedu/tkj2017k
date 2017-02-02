@@ -29,7 +29,7 @@ Nyt NoSQL -tietokannoista esillä on *avain-arvoparitietokanta*[^2], jossa nimen
 [BigTable]: https://research.google.com/archive/bigtable.html
 
 
-Edellisessä osassa esillä olleen *SQLite:n* tapaan *LevelDB*-tietokanta voidaan upottaa sovellukseen siten, että erillillä tietokannan hallintajärjestelmää ei tarvita. 
+Edellisessä osassa esillä olleen *SQLite:n* tapaan *LevelDB*-tietokanta voidaan upottaa sovellukseen siten, että erillistä tietokannan hallintajärjestelmää ei tarvita. 
 
 {% comment %}
 

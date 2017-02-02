@@ -26,7 +26,7 @@ Laadi  ulkoisilta ominaisuksiltaan [tehtävän 3.3](../../osa3/tehtava33) ratkai
   +---------------+     +---------------+
   | findAll       |     | findAll       |
   | findByKey     |     | findByKey     |
-  | create        |     +---------------+s
+  | create        |     +---------------+
   | update        |
   | destroy       |
   +---------------+
