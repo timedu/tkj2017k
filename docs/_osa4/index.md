@@ -17,6 +17,17 @@ permalink: /:collection/index.html
 
 ### Tehtävät
 
+Tehtävissä jatketaan edelleen *kurssien ja opettajien* käsittelyä. Esillä on kahdella eri tavalla jäsennetty dokumenttitietokanta, joka tehtävästä riippuen sijaitsee joko sovellukseen upotettuna tai verkon yli käytettävässä pilvipalvelussa. Tietokannan hallinta toteutetaan kussakin tehtävässä eri järjestelmällä. 
 
 {% include exercises_list.md %}
+
+[Tehtävässä 4.1](tehtava41) tietokanta on jäsennetty kahdeksi dokumenttikoelmaksi, jotka vastaavat relaatiotietokannan tauluja. Tietokannan rakenne on muutenkin "relaatiomainen": *Kurssi*-dokumentintissa on attribuutti, johon on talletettu kurssin opettajaa vastaavan *Opettaja*-dokumentin tietokantatunniste. Tehtävässä toteutetaan tietokantaan liittyvät kyselyt sekä opettajatietojen osalta ylläpito-opetaatiot. Tietokanta on upotettu sovellukseen ja sitä käsitellään [TingoDB][TingoDB]-kirjastolla.
+
+[Tehtävän 4.2](tehtava42) tietokanta muodostuu yhdestä dokumenttikokoelmasta siten, että *Opettaja* esiintyy varsinaisena kokoelman dokumenttina, jonka attribuutin arvona on opettajan pitämien *kurssien* tiedot. Tehtävässä toteutetaan ainoastaan tietokantaan kohdistyvat kyselyt. Edellisen tehtävän tapaan tietokanta on upotettu sovellukseen, mutta sitä käsitellään Tingon sijaan [NeDB][NeDB]-kirjastolla.
+
+[Tehtävässä 4.3](tehtava43) tietokanta siirtyy verkon yli hyödynnettävään pilvipalveluun. Käytettävä [MongoDB][MongoDB]-tietokanta on perustettu [mLab][mLab]:in kautta [Amazon][Amazon]:in pilveen. Tietokannan rakenne vastaa tehtävää 4.1. Tässä toteutetaan dokumenttikokoelmiin kohdistuvat kyselyt. Tehtävän ratkaisu on kyselyjen osalta likimain sama kuin Tehtävässä 4.1. Tietokantayhteys kuitenkin muodostetaan uudelleen kunkin sovellukseen tulevan pyynnön yhteydessä. Valmiin tietokannan sijaan tehtävässä voi käyttää pilvipalveluun itse perustamaansa tietokantaa.
+
+[MongoDB]: https://www.mongodb.com
+[mLab]: https://mlab.com
+[Amazon]: https://aws.amazon.com
 
