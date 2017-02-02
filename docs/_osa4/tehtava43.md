@@ -2,8 +2,8 @@
 layout: exercise_page
 title: "Tehtävä 4.3: Kurssit ja opettajat, MongoDB"
 exercise_template_name: W4E03.KurssitJaOpettajatMongoDB
-exercise_discussion_id: 
-exercise_upload_id: 
+exercise_discussion_id: 75212
+exercise_upload_id: 309703
 ---
 
 Laadi kyselyominaisuksiltaan [tehtävän 4.1](../tehtava41) ratkaisua vastaava sovellus. TingoDB:n sijaan tässä kuitenkin käytetään [pilvipalvelussa][mLab] toimivaa [MongoDB][mongo]-tietokantaa. Tietokannan rakenne on samanlainen kuin tehtävässä 4.1.

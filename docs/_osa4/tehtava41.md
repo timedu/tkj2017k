@@ -2,8 +2,8 @@
 layout: exercise_page
 title: "Tehtävä 4.1: Kurssit ja opettajat, TingoDB"
 exercise_template_name: W4E01.KurssitJaOpettajatTingo1
-exercise_discussion_id: 
-exercise_upload_id: 
+exercise_discussion_id: 75210
+exercise_upload_id: 309699
 ---
 
 Laadi  ulkoisilta ominaisuksiltaan [tehtävän 3.3](../../osa3/tehtava33) ratkaisua vastaava sovellus. Avain-arvoparitietokannan sijaan tässä käytetään kuitenkin [TingoDB][tingo] -dokumettitietokantaa, jonka sovellusrajapinta on yhteensopiva [MongoDB:n rajapinnan][mongo-api] kanssa[^0].

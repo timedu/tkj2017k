@@ -3,13 +3,19 @@ layout: collection_index
 permalink: /:collection/index.html
 ---
 
-[Osassa 3](../osa3) käsiteltiin avain-arvoparitietokantoja, joiden yhteydessä fyysistä tietokantaa käsittelemä järjestelmä ei tunne arvojen rakennetta vaan arvojen tulkinnan tekee järjestelmän kautta tietokantaa käsittelevä sovellus. Osan tehtävissä tietokantaan  talletettiin [JSON][JSON]-muodossa olevia merkkijonoja, jotka esimerkkinä käytetty järjestelmä kykeni muuntamaan sovelluksessa käytettäviksi JavaScript-objekteiksi.
+Kurssin osassa 3 käsiteltiin avain-arvoparitietokantoja, joiden yhteydessä fyysistä tietokantaa käsittelemä järjestelmä ei tunne arvojen rakennetta vaan arvojen tulkinnan tekee järjestelmän kautta tietokantaa käsittelevä sovellus. Osan tehtävissä tietokantaan  talletettiin [JSON][JSON]-muodossa olevia merkkijonoja, jotka esimerkkinä käytetty järjestelmä tosin kykeni muuntamaan sovelluksessa käytettäviksi JavaScript-objekteiksi.
 
 [JSON]: http://www.json.org
 
-Dokumenttitietokannoissa tiedot talletetaan juuri JSON-tyyppisiksi rakenteiksi, joita näiden tietokantojen yhteydessä kutsutaan dokumenteiksi. Erona avain-arvoparitietokantoihin on esim. se, että järjestelmä tunnistaa nämä rakenteet so. järjestelmällä on tiedossa mitä attribuutteja jokin dokumentti sisältää, mikä mahdollistaa järjestelmän toteuttaa esim. kyselyissa attribuuttien arvoihin perustuvan valinnan ja lajittelun. 
+Dokumenttitietokannoissa[^1] tiedot talletetaan juuri JSON-tyyppisiksi rakenteiksi, joita näiden tietokantojen yhteydessä kutsutaan dokumenteiksi. Erona avain-arvoparitietokantoihin on mm. se, että järjestelmä tunnistaa nämä rakenteet so. järjestelmällä on tiedossaan mitä attribuutteja jokin dokumentti sisältää, mikä mahdollistaa järjestelmälle toteuttaa esim. kyselyissa attribuuttien arvoihin perustuvan valinnan ja lajittelun. 
 
-Tiettävästi eniten käytetty dokumenttitietokanta on [MongoDB][MongoDB], joka lienee samalla myös suosituin NoSQL-tietokanta. Mongon ohella tämän osan tehtävissä on esillä kaksi muuta järjestelmää, joita käytettäessä (Mongosta poiketen) tietokanta voidaan upottaa sovellukseen:  
+[^1]: Ks. esim. [ITKA204/Dokumenttitietokannat](https://tim.jyu.fi/view/kurssit/tktl/itka204/kurssimoniste#dokumenttitietokannat)
+
+Tiettävästi [eniten käytetty dokumenttitietokanta][ranking] on [MongoDB][MongoDB], joka lienee samalla myös suosituin NoSQL-tietokanta. Mongon ohella tämän osan tehtävissä on esillä kaksi muuta järjestelmää, joita käytettäessä (Mongosta poiketen) tietokanta voidaan upottaa sovellukseen:  
+
+
+[ranking]: http://db-engines.com/en/ranking/document+store
+
 
 > [TingoDB][TingoDB] is embedded JavaScript NoSql database for Node.js and node-webkit. Its API and features designed to be upward compatible with MongoDB and its driver for Node.js. 
 >
@@ -36,3 +42,4 @@ Tehtävissä jatketaan edelleen *kurssien ja opettajien* käsittelyä. Esillä o
 [mLab]: https://mlab.com
 [Amazon]: https://aws.amazon.com
 
+<br/>

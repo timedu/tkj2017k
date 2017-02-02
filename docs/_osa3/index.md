@@ -14,7 +14,11 @@ Tassä osassa siirrytään tarkastelemaan ns. NoSQL -tietokantoja[^1], joissa ti
 [youtube-fowler]: https://www.youtube.com/watch?v=qI_g07C_Q5I
 
 
-Nyt NoSQL -tietokannoista esillä on *avain-arvoparitietokanta*, jossa nimensä mukaisesti tiedot jäsentyvät siten kuin tietokantatyypin nimitys antaa olettaa. Yksittäistä avain-arvoparia relaatiotietokannassa voi vastata esim. taulukon yksi rivi tai vaikka kokonainen taulukko. Tietokannan hallintajärjestelmä ei tunne arvojen rakennetta vaan tulkinnan tekee tietoja käyttävä sovellus. Tässä avain-arvoparitietokannoista esimerkkinä on [LevelDB][LevelDB], josta kerrotaan seuraavaa:
+Nyt NoSQL -tietokannoista esillä on *avain-arvoparitietokanta*[^2], jossa nimensä mukaisesti tiedot jäsentyvät siten kuin tietokantatyypin nimitys antaa olettaa. Yksittäistä avain-arvoparia relaatiotietokannassa voi vastata esim. taulukon yksi rivi tai vaikka kokonainen taulukko. Tietokannan hallintajärjestelmä ei tunne arvojen rakennetta vaan tulkinnan tekee tietoja käyttävä sovellus. Tässä avain-arvoparitietokannoista esimerkkinä on [LevelDB][LevelDB], josta kerrotaan seuraavaa:
+
+
+[^2]: Ks. esim. [ITKA204/Avain-arvoparitietokannat](https://tim.jyu.fi/view/kurssit/tktl/itka204/kurssimoniste#avain-arvoparitietokannat)
+
 
 > [LevelDB][LevelDB] is a simple key/value data store built by Google, inspired by [BigTable][BigTable]. It's used in Google Chrome and many other products. LevelDB supports arbitrary byte arrays as both keys and values, singular get, put and delete operations, batched put and delete, bi-directional iterators and simple compression using the very fast Snappy algorithm.
 > 

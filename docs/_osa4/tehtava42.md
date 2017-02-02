@@ -2,8 +2,8 @@
 layout: exercise_page
 title: "Tehtävä 4.2: Kurssit ja opettajat, NeDB"
 exercise_template_name: W4E02.KurssitJaOpettajaNeDB
-exercise_discussion_id: 
-exercise_upload_id: 
+exercise_discussion_id: 75211
+exercise_upload_id: 309701
 ---
 
 Laadi kyselyominaisuksiltaan [tehtävän 4.1](../tehtava41) ratkaisua vastaava sovellus. Tietokannan rakenne on edelliseen tehtävään verrattuna kuitenkin hieman erilainen. Samalla [TingoDB][tingo]:n korvaa toinen sovellukseen upotettava dokumenttitietokantaratkaisu, [NeDB][NeDB].
