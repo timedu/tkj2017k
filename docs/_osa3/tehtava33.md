@@ -8,7 +8,7 @@ exercise_upload_id: 308965
 
 Laadi  ulkoisilta ominaisuksiltaan [tehtävän 3.2](../tehtava32) ratkaisua vastaava sovellus, jonka taustalla on edelliseen tehtävään verrattuna hieman erirakenteinen tietokanta. Tässä tukeudutaan Noden LevelDB rajapinnan laajennukseen, jolla tietokannan sisältö voidaan jäsentää jossain määrin relaatiotietokannan tauluja muistuttaviin osiin. Samalla hyödynnetään erillistä node-pakettia, jolla voidaan muodostaa tietokannan tiedoille yksilöllisiä tunnisteita.
 
-Sovellukseen liittyy loki, jota varten lähdekoodi sisältää oman näkymän, `views/del_loki.` Muuten tiedostokokonaisuus vastaa  [edellistä tehtävää](../tehtava32).
+Sovellukseen liittyy loki, jota varten lähdekoodi sisältää oman näkymän, `views/del_loki.js`. Muuten tiedostokokonaisuus vastaa  [edellistä tehtävää](../tehtava32).
 
 #### Mallit ja tietokanta
 
@@ -58,9 +58,41 @@ Tehtävässä tietokanta jäsentyy seuraavasti:
 
 [cuid]: https://github.com/ericelliott/cuid/blob/master/README.markdown#cuid
 
-*Kuvassa 2* `kurssit`-tason alapuolella on otsikolla `<opettaja-cuid>` esitettyjä elementtejä, missä otsikolla viitataan opettajan *avaimeen*. Näissä elementeissä (*alitasoissa*) kurssin tiedot on talletettu opettajittain. `opettajat`-tason alapuolella oleva `del_loki` sisältää tietokannasta poistettujen opettajien *avaimet* erillistä "roskien keruuta"[^1] varten. 
+`opettaja`-tasolla esiintyy seuraavanlaisia avain-arvo -pareja:
+
+~~~
+avain: ciyr146i30005ea1kwcgqhkzt
+arvo:  { etunimi: 'Simo', sukunimi: 'Käkilä' }
+~~~
+<small>Kuva 2a.</small>
+
+ja `kurssit` -tasolla seuraavanlaisia:
+
+~~~
+avain: ciyr146i3000cea1klol9g9dn 
+arvo:  { 
+  tunnus: 'PLA-32811',
+  nimi: 'Web-ohjelmointi',
+  laajuus: 4,
+  opettaja: 'ciyr146i30005ea1kwcgqhkzt' 
+}
+~~~
+<small>Kuva 2b.</small>
+
+
+*Kuvassa 2* `kurssit`-tason alapuolella on otsikolla `<opettaja-cuid>` esitettyjä elementtejä, missä otsikolla viitataan opettajan *avaimeen*. Näissä elementeissä (*alitasoissa*) kurssin tiedot on talletettu opettajittain. Siten, *kuvien 2a* ja *2b* esimerkkeihin liittyen, tietokannassa on taso `ciyr146i30005ea1kwcgqhkzt`, joka sisältää *kuvan 2b* esitettämän avain-arvo -parin.
+
+*Kuvassa 2* `opettajat`-tason alapuolella oleva `del_loki` sisältää tietokannasta poistettujen opettajien *avaimet* erillistä "roskien keruuta"[^1] varten. Jos tietokannan `opettajat`-tasolta poistetaan *kuvan 2a* esittämät tiedot, `del_loki` -tasolle tallentuu seuraavanlainen avain-arvo -pari:
 
 [^1]: Ei toteuteta tähän ratkaisuun
+
+~~~
+avain: ciyr2aotb0003hk1kwqkcqr6y
+arvo:  { opettaja_key: 'ciyr146i30005ea1kwcgqhkzt' }
+~~~
+<small>Kuva 2c.</small>
+
+
 
 #### Toiminnot
 
@@ -74,7 +106,7 @@ Ratkaisuun sisältyy myös toiminnot opettaja-tietojen ylläpitoa varten (*lisä
 
 #### Palautettava aineisto
 
-**Palauta** tehtävän ratkaisuna tiedosto `models/Opettaja.js`. Varmista ennen palautusta, että sovellus toimii tehtäväkuvauksen mukaan sovellusta ajamalla. Tehtävänpohja ei sisällä testikoodia. 
+**Palauta** tehtävän ratkaisuna tiedosto `models/Opettaja.js`. Varmista ennen palautusta, että sovellus toimii sitä ajamalla sekä käyttäen oheistettuja [Selenium-testejä](#testeist). 
 
 ### Vihjeitä ja lisätietoja
 
@@ -84,9 +116,11 @@ Tietokannan alitasojen kautta on käytettävissä sama rajapinta kuin käytettä
 [teixeira]: https://blog.yld.io/2016/10/24/node-js-databases-an-embedded-database-using-leveldb
 [teixeira-sublevel]: https://blog.yld.io/2016/10/24/node-js-databases-an-embedded-database-using-leveldb/#usinglevelsublevel
 
+Seuraavassa kohdassa on vielä kuvattu, miten sovelluksen eri moduulit liittyvät toisiinsa.
+
 #### Sovelluksen osien liittyminen toisiinsa
 
-Tähän mennessä esillä olleiden tehtävien tapaan tässä laadittava ratkaisu on web-palvelinsovellus, joka käynnistymisen jälkeen jää kuutelemaan sovellukseen kohdistuvia palvelupyntöjä. Sovellus käynnistetään kuten aiempienkin tehtävien ratkaisut: `node main.js`. Tosin käynnistys kehitysympäristössä on tehty IDE:n kautta.
+Tähän mennessä esillä olleiden tehtävien tapaan tässä laadittava ratkaisu on web-palvelinsovellus, joka käynnistymisen jälkeen jää kuuntelemaan sovellukseen kohdistuvia palvelupyyntöjä. Sovellus käynnistetään kuten aiempienkin tehtävien ratkaisut: `node main.js`. Tosin käynnistys kehitysympäristössä on tehty IDE:n kautta.
 
 Tehtävän pohjakoodissa kursseja koskevat toiminnot ovat valmiina. Seuraavissa listauksissa on näihin toimintoihin liittyen pohjakoodista otteita, joiden avulla tuodaan vielä esiin sovelluksen eri moduulien littyminen toisiinsa. 
 
@@ -231,8 +265,35 @@ module.exports = {
 
 <small>Listaus 5. Viiteet tietokantaan (configs/db_connection.js)</small>
 
+
 Moduulissa `db_connection.js` (*Listaus 5*) määritellään ensin tunniste (`levelDB`), joka toimii yhteytenä projektin hakemistossa `./database/koulu.level` olevaan LevelDB-tietokantaan. Tämän jälkeen luodaan samaan tietokantaan viittaava tunniste (`subLevelDB`), joka voidaan jakaa alitasoihin. Sitten muodostetaan kaksi alitasoa `opettajat` ja `kurssit`. Moduulin käyttäjälle, esim. `Kurssi.js` (*Listaus 4*), julkaistaan olio, joka sisältää viitteet sekä päätasoon (`base`) että alitasoihin.
 
+
+#### Testeistä
+
+Pohjakoodi sisältää kolme testimoduulia, jotka näkyvät *Project*-ikkunassa *Selenium Tests*-kansiossa: `test_kurssit_kyselyt.js`, `test_opettajat_kyselyt.js` ja `test_opettajat_yllapito`. "Kyselytestit" odottavat, että tietokanta on alkutilassaan. Testimoduulin voi de-aktivoida siirtämällä sen pois em. kansiosta.
+
+Esim. opettajatietojen ylläpitoa testataan seuraavasti:
+
+* Poimitaan Opettajat-sivulta opettajien lukumäärä (ei varsinainen testi)
+* Tuo esiin Lisää-sivun polulla "/opettajat/insert" 
+* Peruuta-painikkeen klikkaus Lisää-sivulla tuo esiin Opettajat-sivun
+* Peruuta-painikkeen klikkaus Lisää-sivulla ei lisää opettajien määrää Opettajat-sivulle
+* Talleta-painikkeen klikkaus Lisää-sivulla esittää lisätyn opettajan Opettaja-sivulla
+* Tuo esiin Päivitä-sivun polulla "/opettajat/:id/update" joka sisältää odotetut tiedot
+* Peruuta-painikkeen klikkaus Päivitä-sivulla tuo esiin Opettaja-sivun niin, että tiedot eivät ole muuttuneet
+* Talleta-painikkeen klikkaus Päivitä-sivulla tuo esiin Opettaja-sivun niin, että tiedot ovat muuttuneet
+* Tuo esiin Poistetaanko-sivun polulla "/opettajat/:id/delete", joka sisältää odotetut tiedot
+* Peruuta-painikkeen klikkaus Poistetaanko-sivulla tuo esiin Opettaja-sivun niin, että tiedot eivät ole poistuneet
+* Poista-painikkeen klikkaus Poistetaanko-sivulla tuo esiin Opettajat-sivun, jossa ei ole poistettuja tietoja
+* Poistetun opettajan avain on esillä "Poistetut opettajat"-sivulla (/opettajat/del_loki)
+
+Jos jokin testi epäonnistuu, testin kuvaaman tilanteen voi pyrkiä todentamaan sovellusta ajamalla, jolloin saattaa selvitä ongelman aiheuttaja.
+
+
+#### Muutoksia
+
+* 170204 - päivitetty koodipohja: selenium-testit ja pieniä korjauksia; tehtäväkuvaukseen täydennyksiä liittyen tietokannan esittelyyn ja testeihin 
 
 <br/>
 
