@@ -11,7 +11,7 @@ Laadi  ulkoisilta ominaisuksiltaan [tehtävän 3.3](../../osa3/tehtava33) ratkai
 [tingo]: http://www.tingodb.com
 [mongo-api]: http://mongodb.github.io/node-mongodb-native
 
-[^0]: Tingo toteuttaa vain osan Mongon sovellusraajapinnasta.
+[^0]: Tingo toteuttaa vain osan Mongon sovellusrajapinnasta.
 
 
 #### Mallit ja tietokanta
@@ -65,14 +65,17 @@ Kaikki sivuilla esitetyt luettelot ovat nousevassa aakkosjärjestyksessä. Sovel
 
 #### Palautettava aineisto
 
-**Palauta** tehtävän ratkaisuna tiedosto `models/Opettaja.js`. Varmista ennen palautusta, että sovellus toimii tehtäväkuvauksen mukaan sovellusta ajamalla[^3]. Tehtävänpohja ei sisällä testikoodia[^4].
+**Palauta** tehtävän ratkaisuna tiedosto `models/Opettaja.js`. Varmista ennen palautusta, että sovellus toimii tehtäväkuvauksen mukaan sovellusta ajamalla[^3] sekä käyttäen oheistettuja Selenium. [Testit](../../osa3/tehtava33/#testeist) ovat yhtä poikkeusta[^4] lukuunottamatta samat kuin edellisessä tehtävissä. 
  
 [^3]: Tarkoitus on, että toimivuus ei edellytä palautettavan moduulin muutosten lisäksi muutoksia muihin moduuleihin. 
-[^4]: Testeillä varustettu pohja saatetaan julkaista myöhemmin. 
+
+[^4]: Tämän tehtävän koodipohjassa ei ole tehtävässä 3 esiintyvään polkuun `/opettajat/del_loki` liittyvää testiä.
 
 ### Vihjeitä ja lisätietoja
 
 Tässä käytetään tietokantaa sen kokoelmiin viittaavien tunisteiden kautta. TingoDB tarjoaa kokoelmiin liittyen esim. seuraavia metodeja: `insert`, `findOne`, `find`, `update`, `save` ja `remove`. Metodien kuvaukset löytyvät Mongon API-dokumenteista kohdasta [Collection][Collection]. 
+
+Seuraavassa kohdassa [Dokumenttien kysely](#dokumenttien-kysely) on aiheeseen liittyviä tehtävän pohjakoodista poimittuja esimerkkejä. Tämän jälkeen kohdassa [Dokumenttien ylläpito](#dokumenttien-yllpito) on *lisäyksen*, *muutoksen* ja *poiston* osalta periaatetason esimerkkejä.
 
 [Collection]: http://mongodb.github.io/node-mongodb-native/2.2/api/Collection.html
 
@@ -227,6 +230,9 @@ collection.update( {...}, { $set: {'attribute': value} }, {multi: true},
 
 Valintaehdon yhteydessä tulisi  huomioida, että kokonaisluku ei ole välttämättä sama kuin vastaava kokonaisluku merkkijonona (vrt. *Listaus 6*).
 
+#### Muutoksia
+
+* 170204 - koodipohjaa täydennetty Selenium-testeillä
 
 <br/>
 
