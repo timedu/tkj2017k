@@ -160,7 +160,8 @@ db.search([{
 <small>Listaus 5. Esimerkki *search*-metodista</small>
 
 
-*Listauksen 5* metodikutsu antaa vastauksen kysymykseen, ketkä ovat *matteon* kavereiden kavereita. Suppea esimerkkiaineisto antaa vastaukseksi henkilön *marco* sekä tiedon siitä, kenen kautta tämä yhteys muodostuu (*daniele*).
+*Listauksen 5* metodikutsu antaa vastauksen kysymykseen, kenen kahden henkilön kautta  kulkee  "kaveruus" *matteon* ja *daviden* välillä. Suppea esimerkkiaineisto antaa vastaukseksi vain yhden polun: *daniele* ja *marco*.
+
 
 
 #### Tehtävän ratkaisua tukevat apufunktiot
