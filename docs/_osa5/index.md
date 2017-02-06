@@ -2,6 +2,7 @@
 layout: collection_index
 permalink: /:collection/index.html
 kesken: 1
+julkaisu: 8.2.2017
 ---
 
 [JYU/ITKA204/graafitietokannat]( https://tim.jyu.fi/view/kurssit/tktl/itka204/kurssimoniste#graafitietokannat)
