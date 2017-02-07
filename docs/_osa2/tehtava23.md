@@ -30,7 +30,7 @@ Tässä sivukartta laajenee sekä kurssien että opettajien osalta siten, että 
 
 ![sivukartta](../img/w2e03.png)
 
-<small>Kuva 2. Sivukartta: sisätää lomakkeet (*uusi*, *muuta* ja *poista*) tietojen ylläpitoa varten.</small>
+<small>Kuva 2. Sivukartta: sisältää lomakkeet (*uusi*, *muuta* ja *poista*) tietojen ylläpitoa varten.</small>
 
 
 *Luettelo*-sivulta voidaa siirtyä lomakkeelle (*uusi*), jolla voi syöttää uuden rivin tietokantaan. Muille lomakkeille (*muuta*, *poista*) voidaan siirtyä *erittely*-sivulta. Kullakin lomakkeella voi joko vahvistaa tai peruuttaa ylläpito-operaation ao. painikkeiden avulla. *Kuvassa 2* on esitetty, mille sivuille käsittely siirtyy lomakesivuita painikkeiden klikkauksen seurauksena. 
