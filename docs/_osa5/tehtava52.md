@@ -94,7 +94,7 @@ Kolmikon *lisäyksen* tietokantaan voidaan tehdä [LevelGraph][LevelGraph] -sove
 Seuraavat apuneuvot saattavat olla tarpeellisia tehtävän ratkaisussa:
 
 * JavaScript-objektin voi muuntaa JSON-merkkijonoksi funktiolla [`JSON.stringify`][JSON.stringify]. 
-* Taulukoita voi liittää taulukon yhteen [`concat`][concat] -metodilla.
+* Taulukoita voi liittää yhteen taulukon [`concat`][concat] -metodilla.
 
 
 [JSON.stringify]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
