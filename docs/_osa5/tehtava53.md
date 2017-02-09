@@ -2,8 +2,8 @@
 layout: exercise_page
 title: "Tehtävä 5.3: Kurssit ja opettajat, Neo4j"
 exercise_template_name: W5E03.KurssitJaOpettajatNeo4j
-exercise_discussion_id: 
-exercise_upload_id: 
+exercise_discussion_id: 76037
+exercise_upload_id: 310809
 ---
 
 ![Kurssi-sivu](../img/w5e03-kurssi.png){: style="max-width: 350px; height: auto; float: right;"}

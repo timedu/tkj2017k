@@ -2,8 +2,8 @@
 layout: exercise_page
 title: "Tehtävä 5.2: Kurssit ja opettajat, LevelGraph CRUD"
 exercise_template_name: W5E02.KurssitJaOpettajatLevelGraphCRUD
-exercise_discussion_id: 
-exercise_upload_id: 
+exercise_discussion_id: 76036
+exercise_upload_id: 310807
 ---
 
 Täydennä [edellisen tehtävän](../tehtava51) ratkaisuasi opettatietoihin liittyvillä ylläpitotoiminnolla, *lisäys*, *muutos* ja *poisto*. Tietokanta tässä on pientä nyanssia lukuun ottamatta samarakenteinen.

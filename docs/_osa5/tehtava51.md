@@ -2,8 +2,8 @@
 layout: exercise_page
 title: "Tehtävä 5.1: Kurssit ja opettajat, LevelGraph"
 exercise_template_name: W5E01.KurssitJaOpettajatLevelGraph
-exercise_discussion_id: 
-exercise_upload_id: 
+exercise_discussion_id: 76035
+exercise_upload_id: 310806
 ---
 
 Laadi ulkoisilta ominaisuksiltaan edellisten tehtävien ratkaisujen kaltainen sovellus, jolla voidaan tarkastella *kurssi- ja opettajatietoja* sekä *yhteenveto-* että *erittelymuotoisten* näkymien kautta. Taustalla oleva tietokantaratkaisu on *triplestore* -tyyppinen [LevelGraph][LevelGraph], joka rakentuu kurssin [osassa 3](../../osa3) esillä olleen [LevelUp][LevelUp] -avain-arvoparitietokannan päälle.  
