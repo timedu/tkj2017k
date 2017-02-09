@@ -18,7 +18,7 @@ site_menu: 1
 
 [LevelDB](http://leveldb.org)
 
-* [Node.js Databases: An Embedded Database Using LevelDB](https://blog.yld.io/2016/10/24/node-js-databases-an-embedded-database-using-leveldb) (Pedro Teixeira, 2016)
+* [Node.js Databases: An Embedded Database Using LevelDB](https://blog.yld.io/2016/10/24/node-js-databases-an-embedded-database-using-leveldb). Pedro Teixeira, 2016.
 * [LevelUP](https://github.com/Level/levelup/blob/master/README.md)
 * [level-sublevel](https://github.com/dominictarr/level-sublevel/blob/master/README.md#level-sublevel)
 * [cuid](https://github.com/ericelliott/cuid/blob/master/README.markdown#cuid)
@@ -34,7 +34,17 @@ site_menu: 1
 [NeDB](https://github.com/louischatriot/nedb/blob/master/README.md)   
 [TingoDB](http://www.tingodb.com)
 
-[Neo4j][neo4j]  
+[LevelGraph](https://github.com/mcollina/levelgraph/blob/master/README.md)
+
+* [Graph databases in the browser: using LevelGraph to explore New Delhi](http://www.vldb.org/pvldb/vol9/p1469-maccioni.pdf). Maccioni&Collina, 2016.
+
+[Neo4j][neo4j]
+
+* [Cypher Query Language](https://neo4j.com/developer/cypher/)
+* [Neo4j Driver for Javascript](http://neo4j.com/docs/api/javascript-driver/current/)
+* [GrapheneDB](http://www.graphenedb.com)
+
+
 [Cassandra][cassandra]  
 [OrientDB][orientdb]  
 
