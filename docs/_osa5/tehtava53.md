@@ -8,7 +8,7 @@ exercise_upload_id:
 
 ![Kurssi-sivu](../img/w5e03-kurssi.png){: style="max-width: 350px; height: auto; float: right;"}
 
-Laadi sovellus, jolla voidaan tarkastella *kurssi- ja opettajatietoja* sekä *yhteenveto-* että *erittelymuotoisten* näkymien kautta. Edellisistä tehtävien ratkaisuista sovelluksen ulkoinen käyttäytyminen poikkeaa siten, että *Kurssi*-sivu esittää kurssien välisiä riippuvuuksia. Tietokantaratkaisuna tässä on [pilvipalvelussa][graphenedb] toimiva [Neo4j][Neo4j]-graafitietokanta.
+Laadi sovellus, jolla voidaan tarkastella *kurssi- ja opettajatietoja* sekä *yhteenveto-* että *erittelymuotoisten* näkymien kautta. Edellisten tehtävien ratkaisuista sovelluksen ulkoinen käyttäytyminen poikkeaa siten, että *Kurssi*-sivu esittää kurssien välisiä riippuvuuksia. Tietokantaratkaisuna tässä on [pilvipalvelussa][graphenedb] toimiva [Neo4j][Neo4j]-graafitietokanta.
 
 [graphenedb]: http://www.graphenedb.com
 [Neo4j]: https://neo4j.com
@@ -111,6 +111,8 @@ Sovelluohjelmassa Cypher-komennot välitetään Neo4j:lle käyttäen ajuria, jok
 
 [node-ajuri]: http://neo4j.com/docs/api/javascript-driver/current/
 
+#### Pohjakoodista poimittuja esimerkkejä
+
 Sovelluksen moduuli `configs/db_connection.js` muodostaa ja julkistaa [`Driver`][Driver]-olion:  
 
 [Driver]: http://neo4j.com/docs/api/javascript-driver/current/class/src/v1/driver.js~Driver.html
@@ -201,7 +203,7 @@ Seuraavan *listauksen  8* *Cypher*-komento on edellistä hieman monimutkaisempi.
 
 [Record]: http://neo4j.com/docs/api/javascript-driver/current/class/src/v1/record.js~Record.html
 
-... to be continued ...
+*Listauksessa 9* on koodi, jolla *Listauksen 7* `result` -olion perusteella voidaan muodostaa halutun muotoinen taulukko opettajista. Taulukon alkio on seuraavanlaista muotoa: `{key: '99', sukunimi: 'Simpsonius', etunimi: 'Bartholomeus'}`.
 
 
 {% highlight javascript %}
@@ -218,6 +220,15 @@ Seuraavan *listauksen  8* *Cypher*-komento on edellistä hieman monimutkaisempi.
 
 <small>Listaus 9. </small>
 
+*Cypher*-komennon *RETURN* -lauseen palauttamaa tietoa voidaan lukea *Record* -olion `get`-metodilla, jonka parametrilla viitataan luettavan tiedon sijaintiin *RETURN*-lauseessa[^3]. *Listauksen 7* *RETURN* palauttaa *Opettaja*-solmuja, joita sovelluksessa vastaa [`Node`][Node]-olio. Sen `properties` -attribuutti sisältää solmuun talletetut avain-arvoparit (vrt. *Listaus 1*) ja `identity` -ominaisuus talletuksen yhteydessä automaattisesti muodostuvan solmun tietokantatunnisteen. 
+
+[^3]: sijainnin ohella voidaan viitata myös tiedon tunisteeseen
+
+[Node]: http://neo4j.com/docs/api/javascript-driver/current/class/src/v1/graph-types.js~Node.html
+
+
+Tehtävän pohjakoodissa on apufunktio `arrify`, jota käytäen *Listauksen 9* koodi voidaan korvata seuraavalla:
+
 
 {% highlight javascript %}
 
@@ -226,6 +237,21 @@ Seuraavan *listauksen  8* *Cypher*-komento on edellistä hieman monimutkaisempi.
 {% endhighlight %}
 
 <small>Listaus 10. </small>
+
+*Listauksen 8* `result`-oliosta opettaja kursseineen voidaan poimia sopivaan muotoon `arrify`-funktiota käyttäen seuraavasti:
+
+
+{% highlight javascript %}
+
+  const opettaja = arrify(result.records)[0];
+  opettaja.kurssit = arrify(result.records, 1);
+
+{% endhighlight %}
+
+<small>Listaus 11. </small>
+
+
+... to be continued ...
 
 
 <br/>
