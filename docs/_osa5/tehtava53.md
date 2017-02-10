@@ -250,8 +250,84 @@ Tehtävän pohjakoodissa on apufunktio `arrify`, jota käytäen *Listauksen 9* k
 
 <small>Listaus 11. </small>
 
+#### Tehtävän toteutuksesta
 
-... to be continued ...
+Tehtävässä laaditaan kurssi-tietohin kohdituvat kyselyt moduulin `models/Kurssi.js` funktiorunkoihin, `findAll` ja `findByKey`, joista jälkimmäisen toteutus edellyttää kaarien (*OPETTAA*, *ON_ESITIETO*) hyödyntämistä kyselyn toteutuksessa. Kyselyn rakentaminen onnistunee yhdellä *Cypher*-komennolla, mutta toteutus linee selkeämpi[^4], jos ongelman ratkaisun perustaa useampaan *Cypher*-komentoon. Komentoja voi olla esim. neljä: 1) kurssi ja sen opettaja, 2) kurssin välittömät esitiedot, 3) kurssin muut esitiedot, 4) kurssit, joille tämä kurssi on esitietona. Tällöin komennoista muodostuu seuraavanlainen ketju:
+
+[^4]: tässä ei oteta kantaa suorituskykykysymyksiin
+
+
+{% highlight javascript %}
+
+session.run("hae kurssi ja opettaja", {/* par */}).then((result1) => {
+  // ...
+  session.run("hae välittömät esitiedot", {/* par */}).then((result2) => {
+    // ...
+    session.run("hae muut esitiedot", {/* par */}).then((result3) => {
+      // ...
+      session.run("hae kurssit, joille tämä esitietona", {/* par */}).then((result4) => {
+        // ...
+      }).catch( error => {/*...*/});        
+      // ...
+    }).catch( error => {/*...*/});    
+    // ...
+  }).catch( error => {/*...*/});
+  // ...
+}).catch((error) => {/*...*/});
+
+{% endhighlight %}
+
+<small>Listaus 12. </small>
+
+Kaikki *listauksen 12* komennot voidaan myös suorittaa rinnakkain, koska minkään komennon valintaehto ei perustu edellisen komennon tulokseen. Tosin, jos käy niin, että komento *hae kurssi ja opettaja* ei palautta kurssia, jälkimmäisiä komentoja ei tarvitse suorittaa. Täten *listauksen 13* komennot voisi järjestää niin, että *hae kurssi ja opettaja* suoritetaan ensin ja muut rinnakkain sen jälkeen:
+
+{% highlight javascript %}
+
+session.run("hae kurssi ja opettaja", {/* par */}).then((result1) => {
+  // ...
+  Promise.all([
+    session.run("hae välittömät esitiedot", {/* par */}),
+    session.run("hae muut esitiedot", {/* par */}),
+    session.run("hae kurssit, joille tämä esitietona", {/* par */})
+  ]).then( resultArr => {
+    const result2 = resultArr[0],
+    const result3 = resultArr[1],
+    const result4 = resultArr[2],
+    // ...
+  }).catch( error => {/*...*/});      
+  // ...
+}).catch((error) => {/*...*/});
+
+{% endhighlight %}
+
+<small>Listaus 13. </small>
+
+Tehtävän pohjakoodin moduulissa `configs/db_seed.js` on CSV-tiedostojen lukeminen toteutettu *Listauksen 13* tapaan hyödyntäen [`Promise.all`][Promise.all] -metodia.
+
+[Promise.all]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all
+
+*Listauksen 13* komennot "*hae välittömät esitiedot*" ja "*hae kurssit, joille tämä esitietona*" palauttavat dataa, joka on talletettuna *solmujen* ohella *kaariin* (ks. *Listaus 4*). Tältä osin *kaaria* käsitellään *solmujen* tapaan:
+
+
+{% highlight javascript %}
+
+  session.run("MATCH (k1)-[e:ON_ESITIETO]->(k2) RETURN e, k1, k2");
+
+{% endhighlight %}
+
+<small>Listaus 14. </small>
+
+Edellisen listauksen komento palautaa tietokannan kaikki *ON_ESITIETO* -riippuvuudet (*kaaret*) kursseineen. Listauksessa *kaaren* otsikon edessä on tunniste *e*, joka viittaa tietokannan kaariin. Komennon *RETURN* -lause palauttaa siten *solmujen* ohella myös *kaaren*.
+
+Ohjelmassa *kaarta* edustaa [`Relationship`][Relationship]-olio, jolla on ominaisuudet `identity` ja `properties` kuten edellä esillä olleella [`Node`][Node]-oliollakin.
+   
+[Relationship]: http://neo4j.com/docs/api/javascript-driver/current/class/src/v1/graph-types.js~Relationship.html
+
+*Listauksissa 12 ja 13* esiintyvän komennon "*hae muut esitiedot*" toteutus edellyttää, että esitieto-polkua seurataan yhtä *ON_ESITIETO*-kaarta etäämmälle. Tällaisen komennon rakentamiseen antanee tukea esim. *Cypherin* [referenssikortin][ref-card] kohta *Patterns*, josta löytyy mm. seuraava esimerkki: `(n)-[*1..5]->(m)` ("*Variable length path of between 1 and 5 relationships from n to m.*").
+
+#### Muutoksia
+
+* 170210: *Vinkkejä ja lisätietoja* -kohtaan lisätty alakohta *Tehtävän toteutuksesta*
 
 
 <br/>
