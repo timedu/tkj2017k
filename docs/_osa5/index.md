@@ -9,7 +9,7 @@ Kurssin kahdessa aikaisemmassa osassa käsitellyissä NoSQL -tietokannoissa tiet
 
 Relaatiotietokantojen tapaan myös graafitietokannoilla on matemaattinen perusta. Tietokanta muodostuu kahdenlaisista elementeistä, *solmuista* ja *kaarista*. *Solmut* vastaava relaatiotietokannan taulujen rivejä. Kun relaatiotietokannassa rivien yhteydet toteutetaan vierasavainten avulla, graafitietokannassa tietojen väliset yhteydet muodostuvat *solmujen* välisten *kaarien* avulla.
 
-Tässä osassa esimerkkijärjestelmänä oleva [Neo4j][Neo4j] on tiettävästi tällä hetkellä [suosituin graafitietokanta][ranking]. Neo4j ei edellytä tietokannan elementtien rakenteen ennakkomäärittelyä ("schemaa")[^2]. Tietokannan elementeille voidaan määritellä "etikettejä", joilla voidaan jäsentää esim. solmuja siten kuin relaatiotietokannassa taulut ryhmittelevät riveja. Sekä solmut että kaaret voivat sisältää "avain-arvo" -periaatteella määriteltyä dataa. Tietokannan käsittelykielenä on SQL:ää muistuttava *Cypher*. 
+Tässä osassa esimerkkijärjestelmänä oleva [Neo4j][Neo4j] on tiettävästi tällä hetkellä [suosituin graafitietokanta][ranking]. Neo4j ei edellytä tietokannan elementtien rakenteen ennakkomäärittelyä ("schemaa")[^2]. Tietokannan elementeille voidaan kuitenkin määritellä "etikettejä", joilla voidaan jäsentää esim. solmuja siten kuin relaatiotietokannassa taulut ryhmittelevät riveja. Sekä solmut että kaaret voivat sisältää "avain-arvo" -periaatteella määriteltyä dataa. Tietokannan käsittelykielenä on SQL:ää muistuttava *Cypher*. 
 
 [^2]: Tietojen rakenteelle voi tosin tarvittaessa asettaa rajoitteita
 
