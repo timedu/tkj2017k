@@ -46,12 +46,24 @@ site_menu: 1
 
 
 [Cassandra][cassandra]  
+
+* [DataStax Node.js Driver for Apache Cassandra](http://docs.datastax.com/en/developer/nodejs-driver/3.2/)
+* [Cassandra Virtual Machines ](https://bitnami.com/stack/cassandra/virtual-machine) (download)
+* [Bitnami Cassandra Virtual Machine](https://docs.bitnami.com/virtual-machine/infrastructure/cassandra/) (doc)
+* [DS101: Introduction to Apache Cassandra](https://academy.datastax.com/resources/ds101-introduction-cassandra). DataStax Academy.
+* [DS220: Data Modeling](https://academy.datastax.com/resources/ds220-data-modeling).
+DataStax Academy.
+* [Datastax Docs](http://docs.datastax.com/en/landing_page/doc/landing_page/current.html)
+* [NetCassandraBeans - plugin](http://plugins.netbeans.org/plugin/59444/netcassandrabeans)
+
 [OrientDB][orientdb]  
 
 [Redis][redis] 
 
 
-<http://db-engines.com>
+<http://db-engines.com>   
+
+<https://bitnami.com/stacks/database>
 
 [sqlite]: https://www.sqlite.org
 [sequelize]: http://www.sequelizejs.com

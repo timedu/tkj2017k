@@ -30,7 +30,7 @@ Opettajatietoihin liittyvään malliin on lisätty ylläpitotoimintoja varten ko
 
 Malleja, `models/Opettaja.js` ja `models/Kurssi.js`, lukuunottamatta sovellus on rakennettu valmiiksi. `findAll`- ja `findByKey` -metodit voit kopioida edellisen tehtävän ratkaisustasi, joten laadittavaksi tässä jää metodit `create`, `update` ja `delete`.
 
-Mallit ottavat moduulin `configs/db_connection.js` käyttöönsä siten, että tietokanta näkyy tunnisteissa `db.level` ja `db.graph`, josta ensimmäinen tarjoaa tietokantaan [LevelUp][LevelUp] -rajapinnan[^1] ja jälkimmäinen [LevelGraph][LevelGraph] -rajapinnan. 
+Mallit ottavat moduulin `configs/db_connection.js` käyttöönsä siten, että tietokanta näkyy tunnisteissa `db.level` ja `db.graph`, joista ensimmäinen tarjoaa tietokantaan [LevelUp][LevelUp] -rajapinnan[^1] ja jälkimmäinen [LevelGraph][LevelGraph] -rajapinnan. 
 
 
 [LevelUp]: https://github.com/Level/levelup/blob/master/README.md
