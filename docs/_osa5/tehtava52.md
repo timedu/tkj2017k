@@ -6,7 +6,7 @@ exercise_discussion_id: 76036
 exercise_upload_id: 310807
 ---
 
-Täydennä [edellisen tehtävän](../tehtava51) ratkaisuasi opettatietoihin liittyvillä ylläpitotoiminnolla, *lisäys*, *muutos* ja *poisto*. Tietokanta tässä on pientä nyanssia lukuun ottamatta samarakenteinen.
+Täydennä [edellisen tehtävän](../tehtava51) ratkaisuasi opettajatietoihin liittyvillä ylläpitotoiminnolla, *lisäys*, *muutos* ja *poisto*. Tietokanta tässä on pientä nyanssia lukuun ottamatta samarakenteinen.
 
 
 #### Mallit ja tietokanta
