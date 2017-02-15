@@ -173,7 +173,7 @@ Binamin konetta voi ajaa myös [VirtualBox][VirtualBox]:lla, jonka voi niin ikä
 [VirtualBox]: https://www.virtualbox.org
 [player]: http://www.vmware.com/products/player/playerpro-evaluation.html
 
-Cassandran voi latata myös [sen omalta][cassandra-download] tai [DataStax:in][datastax-download] sivustolta, mutta Bitnamin virtuaalikoneen käyttöönotto lienee näitä yksinkertaisempaa.  
+Cassandran asennuspaketin voi ladata [sen omalta][cassandra-download] tai [DataStax:in][datastax-download] sivustolta, mutta Bitnamin virtuaalikoneen käyttöönotto lienee asennuspakettia yksinkertaisempaa.  
 
 [cassandra-download]: http://cassandra.apache.org/download/
 [datastax-download]: https://academy.datastax.com/planet-cassandra/cassandra
