@@ -2,8 +2,8 @@
 layout: exercise_page
 title: "Tehtävä 6.2: Kurssit ja opettajat, Cassandra CRUD"
 exercise_template_name: W6E02.KurssitJaOpettajatCassandraCRUD
-exercise_discussion_id: 
-exercise_upload_id: 
+exercise_discussion_id: 76607
+exercise_upload_id: 311785
 ---
 
 Täydennä [edellisen tehtävän](../tehtava61) ratkaisuasi opettajatietoihin liittyvillä ylläpitotoiminnolla, *lisäys*, *muutos* ja *poisto*. Tietokanta tässä on aivan sama kuin [Tehtävässä 6.1](../tehtava61). 

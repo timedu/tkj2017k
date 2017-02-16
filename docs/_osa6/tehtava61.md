@@ -2,8 +2,8 @@
 layout: exercise_page
 title: "Tehtävä 6.1: Kurssit ja opettajat, Cassandra"
 exercise_template_name: W6E01.KurssitJaOpettajatCassandra
-exercise_discussion_id: 
-exercise_upload_id: 
+exercise_discussion_id: 76606
+exercise_upload_id: 311784
 ---
 
 Laadi ulkoisilta ominaisuksiltaan edellisten tehtävien ratkaisujen kaltainen sovellus, jolla voidaan tarkastella *kurssi- ja opettajatietoja* sekä *yhteenveto-* että *erittelymuotoisten* näkymien kautta. Taustalla oleva tietokantaratkaisu on nyt [Bitnamin virtuaalikoneessa][cassandra-vm] ajettava [Cassandra][Cassandra].
