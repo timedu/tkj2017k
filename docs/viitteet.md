@@ -58,6 +58,9 @@ DataStax Academy.
 
 [OrientDB][orientdb]  
 
+* [OrientJS Driver](http://orientdb.com/docs/last/OrientJS.html) 
+* [OrientDB - Getting Started](https://www.udemy.com/orientdb-getting-started/). Udemy.
+
 [Redis][redis] 
 
 
