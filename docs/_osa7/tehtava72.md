@@ -2,8 +2,8 @@
 layout: exercise_page
 title: "Tehtävä 7.2: Kurssit ja opettajat, OrientDB (Graph)"
 exercise_template_name: W7E02.KurssitJaOpettajatOrientDBGraph
-exercise_discussion_id: 
-exercise_upload_id: 
+exercise_discussion_id: 77220
+exercise_upload_id: 313009
 ---
 
 Laadi sovellus, jolla voidaan tarkastella *kurssi- ja opettajatietoja* sekä *yhteenveto-* että *erittelymuotoisten* näkymien kautta. [Tähtävän 5.3](../../osa5/tehtava53) tapaan  *Kurssi*-sivu esittää kurssien välisiä esitieto-riippuvuuksia. Kuten [edellisessä tehtävässä](../tehtava71) tietokantaratkaisuna on tässä [OrientDB][OrientDB], josta nyt hyödynnetään sen graafiominaisuuksia.

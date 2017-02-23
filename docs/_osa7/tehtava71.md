@@ -2,8 +2,8 @@
 layout: exercise_page
 title: "Tehtävä 7.1: Kurssit ja opettajat, OrientDB (Doc)"
 exercise_template_name: W7E01.KurssitJaOpettajatOrientDBDoc
-exercise_discussion_id: 
-exercise_upload_id: 
+exercise_discussion_id: 77219
+exercise_upload_id: 312819
 ---
 
 Laadi sovellus, jolla voidaan tarkastella *kurssi- ja opettajatietoja* sekä ylläpitää opettajan tietoja (*lisäys*, *muutos* ja *poisto*). Ratkaisu toimii ulkoisesti samoin kuin tehtävissä [6.1](../../osa6/tehtava61) ja [6.2](../../osa6/tehtava62) määritelty sovellus. Tietokantaratkaisuna tässä on [OrientDB][OrientDB], joka asennetaan omaan kehitysympäristöön.
@@ -54,7 +54,7 @@ OrientDB:n asennuspaketit löytyvät tuotteen [download][download] -sivulta, jol
 
 [download]: http://orientdb.com/download/
 
-Tehtävässä tarvittavan *Koulu* -tietokannan voi perustaa esim. web-pohjaisella hallintatyökalulla, joka saa selaimeen osoitteella `http://localhost:2480` palvelinohjelmiston ollessa käynnissä. Hallintatyökalun login -ikkunassa on painike *NEW DB*, jota klikkaamalla avautuu ao. ikkuna.
+Tehtävässä tarvittavan *Koulu* -tietokannan voi perustaa esim. web-pohjaisella hallintatyökalulla, joka saa selaimeen osoitteella <http://localhost:2480> palvelinohjelmiston ollessa käynnissä. Hallintatyökalun login -ikkunassa on painike *NEW DB*, jota klikkaamalla avautuu ao. ikkuna.
 
 #### Sovellusrajapinta
 
