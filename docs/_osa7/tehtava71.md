@@ -50,9 +50,17 @@ Toimintoihin liittyvät sivukartat on esitetty esim. tehtävien [6.1](../../osa6
 
 #### OrientDB:n asennus ja tietokannan perustaminen
 
-OrientDB:n asennuspaketit löytyvät tuotteen [download][download] -sivulta, jolta voi valita esim. vaihtoehdon *ZIP file for any OS*. Tämän paketin voi purkaa mihin tahansa hakemistoon kehitysympäristössä. Luokkakoneissa on kirjoitusoikeus hakemistoon `C:\Temp`. Tietokantapalvelimen voi käynnistää `bin`-hakemistosta löytyvällä skriptillä `server.sh` (tai `server.bat`, jos operoidaan Windows-koneessa). Ensimmäisellä käynnistyskerralla skripti kysyy palvelimen pääkäyttäjälle, *root*, salasanaa, joka tallentuu tiedostoon `config/orientdb-server-config.xml`.  
+OrientDB:n asennuspaketit löytyvät tuotteen [download][download] -sivulta, jolta voi valita esim. vaihtoehdon *ZIP file for any OS*. Tämän paketin voi purkaa mihin tahansa hakemistoon kehitysympäristössä.  Tietokantapalvelimen voi käynnistää `bin`-hakemistosta löytyvällä skriptillä `server.sh` (tai `server.bat`, jos operoidaan Windows-koneessa). 
 
 [download]: http://orientdb.com/download/
+
+Ensimmäisellä käynnistyskerralla skripti kysyy palvelimen pääkäyttäjälle, *root*, salasanaa, joka tallentuu tiedostoon `config/orientdb-server-config.xml`. Konfiguraatiotiedostossa pääkäyttäjän salasana ei ole luettevassa muodossa. Jos salasana unohtuu, voi toimia dokumentaatiosta löytyvän ohjeen mukaan: [Restoring the Server's User root][reset-root]. 
+
+[reset-root]: http://orientdb.com/docs/2.2/Server-Security.html#restoring-the-servers-user-root
+
+Luokkakoneissa on kirjoitusoikeus hakemistoon `C:\Temp`, jonne OrientDB:n voisi periaatteessa asentaa. Ympäristö lienee kuitenkin sellainen, että palvelinprosessin käynnistäminen ei onnistu. Siten osan 7 tehtävissä on tukeuduttava omassa laitteessa toimivaan kehitysympäristöön.[^jelastic]
+
+[^jelastic]: OrientDB:n saa veloituksetta sivun [OrientDB in the Cloud](http://orientdb.com/cloud/) kautta kahdeksi viikoksi koekäyttöön  [Jelastic](https://jelastic.com):in pilvipalveluun. Oletusarvoisesti järjestelmästä asentuu versio 1.7.4. Veloitukseton kokeilu lienee kuitenkin rajoitettu siten, että tietokantaa ei voi käyttää palvelun ulkopuolelta so. myös tietokantaa käyttävä sovellus tulisi asentaa palveluun. Tietokannan käyttöön liittyvän [julkisen ip-osoitteen](https://docs.jelastic.com/remote-access-mysql) tiettävästi saisi vasta rahallista korvausta vastaan.
 
 Tehtävässä tarvittavan *Koulu* -tietokannan voi perustaa esim. web-pohjaisella hallintatyökalulla, joka saa selaimeen osoitteella <http://localhost:2480> palvelinohjelmiston ollessa käynnissä. Hallintatyökalun login -ikkunassa on painike *NEW DB*, jota klikkaamalla avautuu ao. ikkuna.
 
@@ -248,6 +256,10 @@ Muokkauksen yhteydessä tulee myös muuntaan "*rid*"  "*key:ksi*" so. poistaa `#
 
 [toString]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 [substr]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr
+
+#### Päivityksiä
+
+* 170224: Täsmennyksiä kohtaan [OrientDB:n asennus ja tietokannan perustaminen](#orientdbn-asennus-ja-tietokannan-perustaminen)
 
 <br/>
 
