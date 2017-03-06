@@ -72,7 +72,7 @@ Mallien tulee olla rakennettu myös niin, että ne lukevat tietokannasta vain ku
 **Palauta** tehtävän ratkaisuna tiedostot `models/Opettaja.js` ja `models/Kurssi.js`. Varmista ennen palautusta, että sovellus toimii tehtäväkuvauksen mukaan sovellusta ajamalla[^3]. Tehtävänpohja ei sisällä testikoodia[^4].
  
 [^3]: Tarkoitus on, että toimivuus ei edellytä palautettavan moduulin muutosten lisäksi muutoksia muihin moduuleihin. 
-[^4]: Testeillä varustettu pohja saatetaan julkaista myöhemmin. 
+[^4]: Testeillä varustettu pohja saatetaan julkaista myöhemmin (tässä voi käyttää Tehtävän 4.1 koodipohjan testejä). 
 
 ### Vihjeitä ja lisätietoja
 

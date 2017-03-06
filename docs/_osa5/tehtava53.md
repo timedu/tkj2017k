@@ -100,6 +100,13 @@ Sovelluksen tietokantakäsittely on edellisten tehtävien tapaan keskitetty modu
 
 Palauta tehtävän ratkaisuna tiedosto `models/Kurssi.js`. Pohjakoodi ei sisällä testejä, joten varmista sovelluksen toiminta sitä ajamalla. Yhtenä testitapauksena voi toimia tämän sivun alussa oleva kuva. 
 
+{% comment %}
+
+Tietokantaan on lisätty (vrt. esim. tehtävä 5.1) kurssi "Johdatus ohjelmistotuotantoon" ja opettaja "Simpsonius, Bartholomeus"; näiltä osin ao. testikoodia on muokattava, jos sitä hyödynnetään tämän tehtävän yhteydessä
+
+{% endcomment %}
+
+
 ### Vinkkejä ja lisätietoja
 
 [Neo4j][Neo4j]-tietokantaa käsitellään hieman SQL:ää muistuttavalla [Cypher][Cypher] -kielellä, jonka dokumentaatiosta löytyy mm. opas [From SQL to Cypher – A hands-on Guide][sql-cypher]. Tiivis yhteenveto kielestä on sen [referenssikortissa][ref-card].
@@ -188,7 +195,7 @@ Seuraavan *listauksen  8* *Cypher*-komento on edellistä hieman monimutkaisempi.
 
 <small>Listaus 8. </small>
 
-*Listauksessa 8* `run`-metodilla on kaksi argumettia, joista toinen on objekti sisältäen parametreja *Cypher* -komennolle (tässä tosin parametreja on vain yksi). Komennon *MATCH* määrittelee edellisen *listauksen 7* tapaan, että käsittelyn lähtökohtana on *Opettaja* -otsikolla varustetut solmut. *WHERE* kuitenkin täsmentää, että käsittelyyn otetaan ainoastaan yksi solmu, jonka tietokantatunniste annetaan komennolle parametrina. 
+*Listauksessa 8* `run`-metodilla on kaksi argumettia, joista jälkimmäinen on objekti sisältäen parametreja *Cypher* -komennolle (tässä tosin parametreja on vain yksi). Komennon *MATCH* määrittelee edellisen *listauksen 7* tapaan, että käsittelyn lähtökohtana on *Opettaja* -otsikolla varustetut solmut. *WHERE* kuitenkin täsmentää, että käsittelyyn otetaan ainoastaan yksi solmu, jonka tietokantatunniste annetaan komennolle parametrina. 
 
 
 *WHERE*-osan  jälkeen komennossa on jo valitun solmun (opettaja) kannalta valinnainen, *OPTIONAL MATCH*, joka poimii tulostaulukkoon opettajien rinnalle kaikki opettajan kurssit. Tässä käytetään hyväksi *Opettaja*- ja *Kurssi*-solmujen välille määriteltyjä *OPETTAA*-kaaria (vrt. *Listaus 3*). Valinnaisuus *MATCH*:in osalta tarkoittaa sitä, että opettaja saadaan tulostaulukkoon, vaikka opettajalla ei olisi yhtään kurssia[^2].

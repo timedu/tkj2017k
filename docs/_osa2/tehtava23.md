@@ -103,7 +103,7 @@ module.exports = (app) => {
 
 Kuhinkin ylläpito-operaatioon liittyy kaksi polkua, joista toiseen tulee pyyntö `GET`-metodilla ja toiseen `POST`-metodilla. *GET*-pyyntöön tuotetaan vasteeksi  ylläpito-operaatioon liittyvä lomake-sivu. *POST*-pyyntöön reagoidaan toteuttamalla  tietokantaoperaatio ja ohjaamalla käsittely sitten seuraavalle sivulle (ks. *Kuvan 2* sivukartta).
 
-Alla olevass *Listauksessa 2* on esitetty metodi, joka tuottaa vasteeksi sivun (*Listaus 3*) sisältäen lomakkeen, jonka avulla voidaan ylläpitää kurssin tietoja.
+Alla olevassa *Listauksessa 2* on esitetty metodi, joka tuottaa vasteeksi sivun (*Listaus 3*) sisältäen lomakkeen, jonka avulla voidaan ylläpitää kurssin tietoja.
 
 {% highlight javascript %}
 
@@ -277,7 +277,7 @@ Sources
 
 Kuten aiemmin niin myös tässä tehtävänä on täydentää sovelluksen kontrollerien funktioiden runkoja. Tässä konrollerit on jatettu koodirivimäärältään pienempiin moduuleihin. Täydennettävät tiedostot löytyvät `kurssit`- ja `opettajat`-kansioista.
 
-Sovellus rakentuu nyt niin, että tiedostot `kurssit.js`  ja `opettajat.js` määrittelevät polut, joihin sovellus reagoi hakemistoisaa `korssit` ja `opettajat` olevien tiedostojen koodilla. Määritellyt polut kytketään sovellukseen päämoduulissa `main.js`.
+Sovellus rakentuu nyt niin, että tiedostot `kurssit.js`  ja `opettajat.js` määrittelevät polut, joihin sovellus reagoi hakemistoisaa `kurssit` ja `opettajat` olevien tiedostojen koodilla. Määritellyt polut kytketään sovellukseen päämoduulissa `main.js`.
 
 Käsiteltävä tietokanta tässä luodaan ORM:n avulla. Pohjan edellisessä versiossa olevan `models/mappins.js` -tiedoston sisältö on jaettu tiedostoihin `models/Kurssi.js`, `models/Opettaja.js` ja `configs/db_connection.js`.
 
