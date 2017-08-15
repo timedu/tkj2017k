@@ -16,6 +16,7 @@ layout: site_index
 
 {% endcomment %}
 
+[Seuraavan lukuvuoden versio materiaalista](https://timedu.github.io/tkj2017s/)
 
 *Tietokantajärjestelmät* on erityyppisiin tietokantoihin tutustuttava ohjelmointi-orientutunut kurssi, jonka painopiste on NoSQL-tietokannoissa. Keskeisiä pohjatietoja tälle kurssille antavat TTY Porissa [Olio-ohjelmointi][olio], [Web-ohjelmointi][jwo] sekä [Tiedonhallinta ja tietokannat][tiha]. Opintojakson toteutusperiaatteena on *ongelmakeskeinen itseopiskelu ohjatusti (OIO)* siten, että varsinasta luento-opetusta ei ole. Kurssi on jaettu seitsemään osaan, joista kunkin ytimen muodostaa tiettyyn teemaan keskittyvä tehtäväsarja.
 
@@ -33,7 +34,4 @@ Kurssi *ensimmäinen osa* tutustuttaa kurssilla käyttettavään kehitystyön pe
 [Suorituksen arvostelu](arvostelu)   
 [Koodin katselmointipyynnöt](https://moodle2.tut.fi/mod/forum/discuss.php?d=74758)   
 
-~~~
-sivusto täydentyy ja päivittyy kurssitoteutuksen edetessä
-~~~
 
